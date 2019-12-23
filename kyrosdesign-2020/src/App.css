@@ -1,0 +1,412 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins|Roboto&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,700,800");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,800");
+html, body {
+  padding: 0;
+  margin: 0;
+  margin-top: 45px;
+  font-family: google sans, poppins, roboto,sans-serif;
+  background: #3e445d;
+  width: 100%;
+  overflow-x: hidden;
+  height: 100%;
+  position: relative;
+  display: block;
+}
+
+html a:focus, body a:focus {
+  outline: none;
+  background: none;
+}
+
+html a:active, body a:active {
+  outline: none;
+}
+
+::-moz-selection {
+  background: #d6aaff;
+  color: white;
+}
+
+::selection {
+  background: #d6aaff;
+  color: white;
+}
+
+.buttonBackground {
+  border-radius: 30px;
+  background: -webkit-gradient(linear, left top, right top, from(#ae7dcf), to(#6e6bff));
+  background: linear-gradient(90deg, #ae7dcf 0%, #6e6bff 100%);
+  background-size: 300px 300px;
+  background-position: 0% 11%;
+  -webkit-box-shadow: 0px 0px 25px 0px rgba(110, 107, 255, 0.302);
+  box-shadow: 0px 0px 25px 0px rgba(110, 107, 255, 0.3);
+  -webkit-animation: example 7s ease infinite;
+          animation: example 7s ease infinite;
+}
+
+.buttonBackground:focus {
+  outline: none;
+}
+
+@-webkit-keyframes example {
+  0% {
+    background-position: 0% 11%;
+  }
+  50% {
+    background-position: 100% 90%;
+  }
+  100% {
+    background-position: 0% 11%;
+  }
+}
+
+@keyframes example {
+  0% {
+    background-position: 0% 11%;
+  }
+  50% {
+    background-position: 100% 90%;
+  }
+  100% {
+    background-position: 0% 11%;
+  }
+}
+
+.hubContainer {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 30;
+  color: white;
+}
+
+.hubContainer section {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hubContainer section .sectionTitle {
+  position: relative;
+  display: block;
+  font-size: 27px;
+  text-align: center;
+}
+
+.hubContainer section .sectionSubtitle {
+  position: relative;
+  display: block;
+  font-size: 13px;
+  width: 250px;
+  top: -20px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.hubContainer a {
+  color: white;
+  text-decoration: none;
+}
+
+.hubContainer .homePage {
+  position: relative;
+  display: block;
+  top: 60px;
+  width: 90%;
+  height: calc(100vh - 60px);
+  left: 5%;
+}
+
+.hubContainer .homePage h3 {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.hubContainer .homePage h1 {
+  position: relative;
+  display: block;
+  font-size: 30px;
+  top: -20px;
+}
+
+.hubContainer .homePage p {
+  position: relative;
+  display: block;
+  top: -20px;
+}
+
+.hubContainer .homePage .swipe {
+  position: absolute;
+  display: block;
+  left: 50%;
+  bottom: 90px;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  -webkit-animation: swipe 2s ease infinite;
+          animation: swipe 2s ease infinite;
+  -webkit-box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.04);
+  box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.04);
+}
+
+.hubContainer .homePage .swipe .ver {
+  position: relative;
+  display: block;
+  width: 3px;
+  border-radius: 100px;
+  height: 40px;
+  background-color: white;
+}
+
+.hubContainer .homePage .swipe .arr {
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 3px;
+  border-radius: 100px;
+  background-color: white;
+  -webkit-transform: translate(100%, 0);
+          transform: translate(100%, 0);
+}
+
+.hubContainer .homePage .swipe .arr:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  left: -1px;
+  top: 30px;
+}
+
+.hubContainer .homePage .swipe .arr:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  left: -16px;
+  top: 30px;
+}
+
+@-webkit-keyframes swipe {
+  0% {
+    bottom: 140px;
+  }
+  50% {
+    bottom: 120px;
+  }
+  100% {
+    bottom: 140px;
+  }
+}
+
+@keyframes swipe {
+  0% {
+    bottom: 140px;
+  }
+  50% {
+    bottom: 120px;
+  }
+  100% {
+    bottom: 140px;
+  }
+}
+
+.hubContainer .buttonHomepage {
+  position: relative;
+  display: block;
+  padding: 10px 20px;
+  width: 90px;
+  font-size: 145x;
+  text-align: center;
+  top: -20px;
+}
+
+.navbar {
+  top: 0;
+  width: 100%;
+  height: 65px;
+  background: #383c4a;
+  position: fixed;
+  display: block;
+  z-index: 111;
+  -webkit-transition: .3s;
+  transition: .3s;
+  -webkit-box-shadow: 0px 0px 20px -1px rgba(30, 33, 41, 0.6);
+  box-shadow: 0px 0px 20px -1px rgba(30, 33, 41, 0.6);
+}
+
+.navbar .menu.opened {
+  list-style: none;
+  position: fixed;
+  display: block;
+  left: 0;
+  width: 100%;
+  opacity: 1;
+  color: white;
+  background: #383c4a;
+  text-align: center;
+  padding: 0;
+  height: calc(100vh - 61px);
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 100;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.navbar .menu.opened .container {
+  position: relative;
+  display: block;
+  top: 50%;
+  -webkit-transform: translate(0, calc(-50% - 32.5px));
+          transform: translate(0, calc(-50% - 32.5px));
+}
+
+.navbar .menu.opened .menu-item {
+  position: relative;
+  display: block;
+  margin: 10px auto;
+  width: 100px;
+  font-size: 20px;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar .menu.opened .menu-item .menu-link {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar .menu.opened .menu-item:nth-child(2) {
+  width: 150px;
+}
+
+.navbar .menu.closed {
+  position: absolute;
+  display: block;
+  opacity: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+  left: 100%;
+  list-style: none;
+  width: 100%;
+  color: white;
+  background: #383c4a;
+  text-align: center;
+  padding: 0;
+  height: calc(100vh - 61px);
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 100;
+  transition: .3s;
+}
+
+.navbar .menu.closed .container {
+  position: relative;
+  display: block;
+  top: 50%;
+  -webkit-transform: translate(0, calc(-50% - 32.5px));
+          transform: translate(0, calc(-50% - 32.5px));
+}
+
+.navbar .menu.closed .menu-item {
+  position: relative;
+  display: block;
+  margin: 10px auto;
+  width: 100px;
+  font-size: 20px;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar .menu.closed .menu-item .menu-link {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar .menu.closed .menu-item:nth-child(2) {
+  width: 150px;
+}
+
+.navbar .nav-brand {
+  position: relative;
+  display: block;
+  left: 10px;
+  height: 45px;
+  width: 200px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  text-decoration: none;
+}
+
+.navbar .nav-brand span {
+  position: absolute;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  top: 7px;
+  color: white;
+  font-size: 20px;
+}
+
+.navbar .nav-brand img {
+  height: 100%;
+}
+
+.navbar .menuListener {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  float: right;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.navbar .menuListener span {
+  width: 20px;
+  height: 3px;
+  position: absolute;
+  display: block;
+  background-color: white;
+  margin: 10px;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  right: 20px;
+  top: -22px;
+  border-radius: 10px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  font-weight: 800;
+}
+
+.navbar .menuListener.closed span:nth-child(2) {
+  width: 28px;
+  top: -28px;
+}
+
+.navbar .menuListener.closed span:nth-child(1) {
+  top: -15px;
+}
+
+.navbar .menuListener.opened span:nth-child(2) {
+  width: 20px;
+  top: -22px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.navbar .menuListener.opened span:nth-child(1) {
+  top: -22px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+/*# sourceMappingURL=App.css.map */
