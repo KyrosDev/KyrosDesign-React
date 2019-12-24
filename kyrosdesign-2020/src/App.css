@@ -2,6 +2,56 @@
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,700,800");
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,800");
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #383c4a;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 30px;
+  background: -webkit-gradient(linear, left top, right top, from(#ae7dcf), to(#6e6bff));
+  background: linear-gradient(90deg, #ae7dcf 0%, #6e6bff 100%);
+  background-size: 400px 400px;
+  background-position: 0% 11%;
+  -webkit-box-shadow: 0px 0px 25px 0px rgba(110, 107, 255, 0.302);
+  box-shadow: 0px 0px 25px 0px rgba(110, 107, 255, 0.3);
+  -webkit-animation: asd 7s ease infinite;
+          animation: asd 7s ease infinite;
+}
+
+@-webkit-keyframes asd {
+  0% {
+    background-position: 0% 11%;
+  }
+  50% {
+    background-position: 100% 90%;
+  }
+  100% {
+    background-position: 0% 11%;
+  }
+}
+
+@keyframes asd {
+  0% {
+    background-position: 0% 11%;
+  }
+  50% {
+    background-position: 100% 90%;
+  }
+  100% {
+    background-position: 0% 11%;
+  }
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ae7dcf;
+}
+
 html, body {
   padding: 0;
   margin: 0;
@@ -114,6 +164,70 @@ html a:active, body a:active {
           transform: translate(-50%, 0);
 }
 
+.resources {
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: block;
+}
+
+.resources .resourcesContainer {
+  position: relative;
+  display: block;
+  width: 90%;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.resources .resourcesContainer .sourceContainer {
+  width: 90%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.resources .resourcesContainer ul {
+  list-style: none;
+}
+
+.resources .resourcesContainer ul li {
+  width: 100%;
+  height: auto;
+  padding-bottom: 5px;
+  background: #5a679c;
+  border-radius: 10px;
+  margin-bottom: 50px 0;
+}
+
+.resources .resourcesContainer ul li h1 {
+  position: relative;
+  display: block;
+  top: 20px;
+  font-size: 20px;
+}
+
+.resources .resourcesContainer ul li h3 {
+  font-size: 13px;
+  font-weight: 300;
+  padding: 0;
+  margin: 0;
+  top: 0px;
+  position: relative;
+}
+
+.resources .resourcesContainer ul li p {
+  position: relative;
+  display: block;
+}
+
+.resources .resourcesContainer ul li a {
+  position: relative;
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  top: 120%;
+  border-radius: 7px;
+}
+
 @-webkit-keyframes example {
   0% {
     background-position: 0% 11%;
@@ -138,7 +252,7 @@ html a:active, body a:active {
   }
 }
 
-.hubContainer {
+.container {
   position: absolute;
   display: block;
   width: 100%;
@@ -147,20 +261,20 @@ html a:active, body a:active {
   color: white;
 }
 
-.hubContainer section {
+.container section {
   position: relative;
   display: block;
   width: 100%;
 }
 
-.hubContainer section .sectionTitle {
+.container section .sectionTitle {
   position: relative;
   display: block;
   font-size: 27px;
   text-align: center;
 }
 
-.hubContainer section .sectionSubtitle {
+.container section .sectionSubtitle {
   position: relative;
   display: block;
   font-size: 13px;
@@ -172,7 +286,7 @@ html a:active, body a:active {
   margin: 0 auto;
 }
 
-.hubContainer form {
+.container form {
   position: relative;
   display: block;
   width: 90%;
@@ -183,7 +297,7 @@ html a:active, body a:active {
   margin-bottom: 40px;
 }
 
-.hubContainer form .inputs {
+.container form .inputs {
   top: 30px;
   position: relative;
   display: block;
@@ -196,7 +310,7 @@ html a:active, body a:active {
   margin: 15px auto;
 }
 
-.hubContainer form textarea {
+.container form textarea {
   display: block;
   position: relative;
   height: 200px !important;
@@ -205,7 +319,7 @@ html a:active, body a:active {
   font-family: google sans, poppins, roboto,sans-serif;
 }
 
-.hubContainer form .button {
+.container form .button {
   position: absolute;
   display: block;
   width: 80%;
@@ -220,20 +334,20 @@ html a:active, body a:active {
   left: 10%;
 }
 
-.hubContainer footer {
+.container footer {
   width: 100%;
   height: auto;
   background: #292b31;
   color: #bdbdbd;
 }
 
-.hubContainer .footerContainer {
+.container .footerContainer {
   position: relative;
   display: block;
   padding: 20px 30px;
 }
 
-.hubContainer .footerContainer .arrow {
+.container .footerContainer .arrow {
   width: 15px;
   position: relative;
   display: none;
@@ -243,16 +357,28 @@ html a:active, body a:active {
   transition: .3s;
 }
 
-.hubContainer .footerContainer .arrow img {
+.container .footerContainer .arrow img {
   width: 100%;
 }
 
-.hubContainer .footerContainer .otherLinks .link:hover .arrow {
+.container .footerContainer a {
+  color: #bdbdbd;
+  text-decoration: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.container .footerContainer .otherLinks .link:hover .arrow {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-animation: linkArrow .3s ease;
           animation: linkArrow .3s ease;
+}
+
+.container .footerContainer ul .link:hover a {
+  color: white;
+  text-decoration: underline;
 }
 
 @-webkit-keyframes linkArrow {
@@ -284,40 +410,47 @@ html a:active, body a:active {
   }
 }
 
-.hubContainer .footerContainer .authorContainer {
+.container .footerContainer .authorContainer {
   position: relative;
   display: block;
+  height: 60px;
+  width: 200px;
+  margin: 0 auto;
 }
 
-.hubContainer .footerContainer .authorContainer ul {
+.container .footerContainer .authorContainer ul {
   text-align: center;
-  left: -10px;
+  padding-left: 0;
   list-style: none;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
+  margin: 10px 0;
 }
 
-.hubContainer .footerContainer .authorContainer ul .logoContainer {
+.container .footerContainer .authorContainer ul .logoContainer {
   width: 60px;
   height: 60px;
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
 }
 
-.hubContainer .footerContainer .authorContainer ul img {
-  width: 100%;
+.container .footerContainer .authorContainer ul img {
+  width: 40%;
+  position: relative;
+  opacity: .6;
+  top: -5px;
 }
 
-.hubContainer .footerContainer .authorContainer ul span {
+.container .footerContainer .authorContainer ul span {
   position: relative;
   display: block;
   top: 4px;
   font-size: 20px;
 }
 
-.hubContainer .footerContainer .links {
+.container .footerContainer .links {
   list-style: none;
   position: relative;
   display: block;
@@ -327,32 +460,27 @@ html a:active, body a:active {
   top: -20px;
 }
 
-.hubContainer .footerContainer .links h1 {
+.container .footerContainer .links h1 {
   font-size: 20px;
   position: relative;
   display: block;
   top: 10px;
 }
 
-.hubContainer .footerContainer .links .link {
+.container .footerContainer .links .link {
   position: relative;
   display: block;
   font-size: 15px;
 }
 
-.hubContainer .footerContainer a {
-  color: #bdbdbd;
-  text-decoration: underline;
-}
-
-.hubContainer .footerContainer .copyrights {
+.container .footerContainer .copyrights {
   position: relative;
   display: block;
   font-size: 14px;
   text-align: center;
 }
 
-.hubContainer .footerContainer .otherLinks {
+.container .footerContainer .otherLinks {
   list-style: none;
   position: relative;
   display: block;
@@ -362,26 +490,26 @@ html a:active, body a:active {
   top: -20px;
 }
 
-.hubContainer .footerContainer .otherLinks h1 {
+.container .footerContainer .otherLinks h1 {
   font-size: 20px;
   position: relative;
   display: block;
   top: 10px;
 }
 
-.hubContainer .footerContainer .otherLinks .link {
+.container .footerContainer .otherLinks .link {
   position: relative;
   display: block;
   width: 100px;
   font-size: 15px;
 }
 
-.hubContainer a {
+.container a {
   color: white;
   text-decoration: none;
 }
 
-.hubContainer .homePage {
+.container .homePage {
   position: relative;
   display: block;
   top: 60px;
@@ -390,25 +518,25 @@ html a:active, body a:active {
   left: 5%;
 }
 
-.hubContainer .homePage h3 {
+.container .homePage h3 {
   font-size: 14px;
   font-weight: 400;
 }
 
-.hubContainer .homePage h1 {
+.container .homePage h1 {
   position: relative;
   display: block;
   font-size: 30px;
   top: -20px;
 }
 
-.hubContainer .homePage p {
+.container .homePage p {
   position: relative;
   display: block;
   top: -20px;
 }
 
-.hubContainer .homePage .swipe {
+.container .homePage .swipe {
   position: absolute;
   display: block;
   left: 50%;
@@ -421,7 +549,7 @@ html a:active, body a:active {
   box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.04);
 }
 
-.hubContainer .homePage .swipe .ver {
+.container .homePage .swipe .ver {
   position: relative;
   display: block;
   width: 3px;
@@ -430,7 +558,7 @@ html a:active, body a:active {
   background-color: white;
 }
 
-.hubContainer .homePage .swipe .arr {
+.container .homePage .swipe .arr {
   position: absolute;
   display: block;
   width: 20px;
@@ -441,14 +569,14 @@ html a:active, body a:active {
           transform: translate(100%, 0);
 }
 
-.hubContainer .homePage .swipe .arr:nth-child(3) {
+.container .homePage .swipe .arr:nth-child(3) {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   left: -1px;
   top: 30px;
 }
 
-.hubContainer .homePage .swipe .arr:nth-child(2) {
+.container .homePage .swipe .arr:nth-child(2) {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   left: -16px;
@@ -479,7 +607,7 @@ html a:active, body a:active {
   }
 }
 
-.hubContainer .buttonHomepage {
+.container .buttonHomepage {
   position: relative;
   display: block;
   padding: 10px 20px;
@@ -491,7 +619,7 @@ html a:active, body a:active {
 }
 
 .navbar {
-  top: 0;
+  top: -1px;
   width: 100%;
   height: 65px;
   background: #383c4a;
@@ -525,7 +653,7 @@ html a:active, body a:active {
   transition: .3s;
 }
 
-.navbar .menu.opened .container {
+.navbar .menu.opened .navContainer {
   position: relative;
   display: block;
   top: 50%;
@@ -573,7 +701,7 @@ html a:active, body a:active {
   transition: .3s;
 }
 
-.navbar .menu.closed .container {
+.navbar .menu.closed .navContainer {
   position: relative;
   display: block;
   top: 50%;
@@ -625,7 +753,10 @@ html a:active, body a:active {
 }
 
 .navbar .nav-brand img {
-  height: 100%;
+  position: relative;
+  top: 4px;
+  height: 80%;
+  padding: 0 15px;
 }
 
 .navbar .menuListener {

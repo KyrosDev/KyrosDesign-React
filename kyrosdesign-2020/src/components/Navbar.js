@@ -1,5 +1,5 @@
-import React, { Component, setState } from 'react';
-import logo from "../logo.svg"
+import React, { Component} from 'react';
+import logo from "./img/logo.png"
 import {Link} from "react-router-dom";
 
 export default class Navbar extends Component {
@@ -28,7 +28,7 @@ export default class Navbar extends Component {
                 <span />
             </div>
             <ul className={this.state.hasClass ? 'menu opened' : 'menu closed'}>
-                <div className="container">
+                <div className="navContainer">
                     <li className="menu-item">
                         <Link to="/" className="menu-link">Home</Link>
                     </li>
@@ -39,10 +39,10 @@ export default class Navbar extends Component {
                         <Link to="/portfolio" className="menu-link">Portfolio</Link>
                     </li>
                     <li className="menu-item">
-                        <a href="#resources" className="menu-link">Resources</a>
+                        <Link to="/#resources" className="menu-link">Resources</Link>
                     </li>
                     <li className="menu-item buttonBackground">
-                        <a href="#contact" className="menu-link">Contact</a>
+                        <Link to="/#contact" className="menu-link">Contact</Link>
                     </li>
                 </div>
             </ul>

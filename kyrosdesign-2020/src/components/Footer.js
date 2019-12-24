@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import arrowRight from './img/right-arrow (1).svg'
-import logo from "../logo.svg";
+import logo from "./img/logo.png";
 
 export default class Footer extends Component {
   render() {
@@ -11,7 +11,7 @@ export default class Footer extends Component {
           <div className="authorContainer">
             <ul>
               <li className="logoContainer">
-                <img src={logo} alt="Drafts"/>
+                <img src={logo} ref="Drafts" alt=""/>
               </li>
               <li>
                 <span className="author">KyrosDesign</span>
@@ -21,19 +21,19 @@ export default class Footer extends Component {
           <ul className="otherLinks">
             <h1 className="listTitle">Socials</h1>
             <li className="link">
-              <a href="https://www.instagram.com/__v.alecs__" target="_blank">Instagram</a><span className="arrow"><img src={arrowRight}/></span>
+              <a href="https://www.instagram.com/__v.alecs__" rel="noopener noreferrer" target="_blank">Instagram</a><span className="arrow"><img src={arrowRight} alt=""/></span>
             </li>
             <li className="link">
-              <a href="https://www.github.com/KyrosDev" target="_blank">GitHub</a><span className="arrow"><img src={arrowRight}/></span>
+              <a href="https://www.github.com/KyrosDev" rel="noopener noreferrer" target="_blank">GitHub</a><span className="arrow"><img src={arrowRight} alt=""/></span>
             </li>
             <li className="link">
-              <a href="https://www.twitter.com/KyrosDes" target="_blank">Twitter</a><span className="arrow"><img src={arrowRight}/></span>
+              <a href="https://www.twitter.com/KyrosDes" rel="noopener noreferrer" target="_blank">Twitter</a><span className="arrow"><img src={arrowRight} alt=""/></span>
             </li>
             <li className="link">
-              <a href="/" target="_blank">YouTube</a><span className="arrow"><img src={arrowRight}/></span>
+              <a href="/" rel="noopener noreferrer" target="_blank">YouTube</a><span className="arrow"><img src={arrowRight} alt=""/></span>
             </li>
             <li className="link">
-              <a href="https://t.me/KyrosDesign" target="_blank">Telegram</a><span className="arrow"><img src={arrowRight}/></span>
+              <a href="https://t.me/KyrosDesign" rel="noopener noreferrer" target="_blank">Telegram</a><span className="arrow"><img src={arrowRight} alt=""/></span>
             </li>
           </ul>
           <ul className="links">

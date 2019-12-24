@@ -6,7 +6,7 @@ import value from "./img/workflow/value.svg"
 export default class Workflow extends Component {
   render() {
     return (
-        <section className="workflow">
+        <section className="workflow" id="workflow">
             <h1 className="sectionTitle">Work Process</h1>
             <h3 className="sectionSubtitle">Here I will explain how I work and how I proceed in creating my works</h3>
             <div className="workFlowContainer">

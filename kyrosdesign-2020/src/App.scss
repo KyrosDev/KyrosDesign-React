@@ -11,6 +11,46 @@ $buttonsGradient: linear-gradient(90deg, rgb(174, 125, 207) 0%, rgb(110, 107, 25
 $cardsBackground: #5a679c;
 $footer:#292b31;
 
+
+//SCROLLBAR
+
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: $dark;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    border-radius: 30px;
+    background: $buttonsGradient;
+    background-size: 400px 400px;
+    background-position: 0% 11%;
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(110, 107, 255, 0.302);
+    -moz-box-shadow: 0px 0px 25px 0px rgba(110, 107, 255,.3);
+    box-shadow: 0px 0px 25px 0px rgba(110, 107, 255, .3);
+    animation: asd 7s ease infinite;
+
+
+    @keyframes asd {
+        0%{
+            background-position: 0% 11%;
+        }50% {
+            background-position: 100% 90%;
+        }100% {
+            background-position: 0% 11%;
+        }
+    }
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $buttonsBackground;
+  }
+
+
 html, body{
     padding: 0;
     margin: 0;
@@ -123,6 +163,75 @@ html, body{
     }
 }
 
+.resources{
+
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: block;
+
+    .resourcesContainer{
+        position: relative;
+        display: block;
+        width: 90%;
+        height: auto;
+        margin-bottom: 30px;
+
+        .sourceContainer{
+            width: 90%;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        ul{
+            list-style: none;
+
+            li{
+                width: 100%;
+                height: auto;
+                padding-bottom: 5px;
+                background: $cardsBackground;
+                border-radius: 10px;
+                margin-bottom: 50px 0;
+
+                h1{
+                    position: relative;
+                    display: block;
+                    top: 20px;
+                    font-size: 20px;
+                }
+
+                h3{
+                    font-size: 13px;
+                    font-weight: 300;
+                    padding: 0;
+                    margin: 0;
+                    top: 0px;
+                    position: relative;
+                }
+
+                p{
+                    position: relative;
+                    display: block;
+                }
+
+                a{
+                    position: relative;
+                    display: block;
+                    text-align: center;
+                    padding: 10px 0;
+                    top: 120%;
+                    border-radius: 7px;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
 @keyframes example {
     0%{
         background-position: 0% 11%;
@@ -136,7 +245,7 @@ html, body{
 
 
 //HUB
-.hubContainer{
+.container{
     position: absolute;
     display: block;
     width: 100%;
@@ -251,9 +360,20 @@ html, body{
 
         }
 
+        a{
+            color: #bdbdbd;
+            text-decoration: none;
+            transition: .3s;
+        }
+
         .otherLinks .link:hover .arrow{
             display: inline-flex;
             animation: linkArrow .3s ease;
+        }
+
+        ul .link:hover a{
+            color: white;
+            text-decoration: underline;
         }
 
         @keyframes linkArrow {
@@ -271,13 +391,17 @@ html, body{
         .authorContainer{
             position: relative;
             display: block;
+            height: 60px;
+            width: 200px;
+            margin: 0 auto;
 
             ul{
                 text-align: center;
-                left: -10px;
+                padding-left: 0;
                 list-style: none;
                 display: inline-flex;
                 position: relative;
+                margin: 10px 0;
 
                 .logoContainer{
                     width: 60px;
@@ -287,7 +411,10 @@ html, body{
                 }
 
                 img{
-                    width: 100%;
+                    width: 40%;
+                    position: relative;
+                    opacity: .6;
+                    top: -5px;
                 }
 
                 span{
@@ -298,7 +425,6 @@ html, body{
                 }
 
             }
-
 
         }
 
@@ -324,12 +450,6 @@ html, body{
                 font-size: 15px;
             }
 
-        }
-
-
-        a{
-            color: #bdbdbd;
-            text-decoration: underline;
         }
 
         .copyrights{
@@ -470,11 +590,10 @@ html, body{
 
 }
 
-
 //NAV BAR
 
 .navbar{
-    top: 0;
+    top: -1px;
     width: 100%;
     height: 65px;
     background: $dark;
@@ -503,7 +622,7 @@ html, body{
         z-index: 100;
         transition: .3s;
 
-        .container{
+        .navContainer{
             position: relative;
             display: block;
             top: 50%;
@@ -547,7 +666,7 @@ html, body{
         z-index: 100;
         transition: .3s;
 
-        .container{
+        .navContainer{
             position: relative;
             display: block;
             top: 50%;
@@ -593,7 +712,10 @@ html, body{
             font-size: 20px;
         }
         img{
-            height: 100%;
+            position: relative;
+            top: 4px;
+            height: 80%;
+            padding: 0 15px;
         }
     }
 

@@ -1,17 +1,22 @@
 import React, { Component } from 'react';
 
+const services = ["1", "2", "3"];
+const items = [];
+
+for (const [index, value] of services.entries()) {
+  items.push(
+    <li key={index}>{value}</li>
+  );
+}
+
 export default class Services extends Component {
   render() {
     return (
-        <section className="services" ref="services">
+        <section className="services">
             <h1 className="sectionTitle">Services</h1>
             <h3 className="sectionSubtitle">Here you can find all the services I offer to my customers</h3>
             <ul className="services">
-              <li className="service">1</li>
-              <li className="service">1</li>
-              <li className="service">1</li>
-              <li className="service">1</li>
-              <li className="service">1</li>
+              {items}
             </ul>
             <div id="resources" />
         </section>
