@@ -9,6 +9,7 @@ $selection: #d6aaff;
 $buttonsBackground: rgb(174,125,207);
 $buttonsGradient: linear-gradient(90deg, rgb(174, 125, 207) 0%, rgb(110, 107, 255) 100%);
 $cardsBackground: #5a679c;
+$footer:#292b31;
 
 html, body{
     padding: 0;
@@ -39,7 +40,7 @@ html, body{
 .buttonBackground{
     border-radius: 30px;
     background: $buttonsGradient;
-    background-size: 300px 300px;
+    background-size: 400px 400px;
     background-position: 0% 11%;
     -webkit-box-shadow: 0px 0px 25px 0px rgba(110, 107, 255, 0.302);
     -moz-box-shadow: 0px 0px 25px 0px rgba(110, 107, 255,.3);
@@ -68,7 +69,7 @@ html, body{
             height: 400px;
             margin-bottom: 50px;
             background: $cardsBackground;
-            border-radius: 30px;
+            border-radius: 10px;
             text-align: center;
             -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
             -moz-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, .1);
@@ -113,6 +114,7 @@ html, body{
                 width: 200px;
                 top: 20px;
                 left: 50%;
+                color: #dfdfdf;
                 transform: translate(-50%, 0);
             }
 
@@ -130,6 +132,8 @@ html, body{
         background-position: 0% 11%;
     }
 }
+
+
 
 //HUB
 .hubContainer{
@@ -159,9 +163,209 @@ html, body{
             width: 250px;
             top: -20px;
             text-align: center;
+            color: #dfdfdf;
+            font-weight: 400;
             margin: 0 auto;
         }
 
+    }
+
+    form{
+
+        position: relative;
+        display: block;
+        width: 90%;
+        background: $dark;
+        border-radius: 10px;
+        left: 5%;
+        height: 410px;
+        margin-bottom: 40px;
+
+        .inputs{
+            top: 30px;
+            position: relative;
+            display: block;
+            width: 70%;
+            height: 20px;
+            border-radius: 7px;
+            border: none;
+            outline: none;
+            padding: 10px 15px;
+            margin: 15px auto;
+        }
+
+        textarea{
+            display: block;
+            position: relative;
+            height: 200px !important;
+            resize: none;
+            width: 80%;
+            font-family: google sans, poppins, roboto,sans-serif;
+        }
+
+        .button{
+            position: absolute;
+            display: block;
+            width: 80%;
+            margin: 10px auto;
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 7px;
+            border: none;
+            outline: none;
+            color: white;
+            bottom: 30px;
+            left: 10%;
+            
+        }
+
+    }
+
+
+    //Footer
+
+    footer{
+        width: 100%;
+        height: auto;
+        background: $footer;
+        color: #bdbdbd;
+    }
+
+    .footerContainer{
+
+        position: relative;
+        display: block;
+        padding: 20px 30px; 
+
+        .arrow{
+            width: 15px;
+            position: relative;
+            display: none;
+            left: 10px;
+            top: 2px;
+            transition: .3s;
+
+            img{
+                width: 100%;
+            }
+
+        }
+
+        .otherLinks .link:hover .arrow{
+            display: inline-flex;
+            animation: linkArrow .3s ease;
+        }
+
+        @keyframes linkArrow {
+            0%{
+                opacity: 0;
+                display: none;
+                left: 0px;
+            } 100%{
+                display: inline-flex;
+                opacity: 1;
+                left: 10px;
+            }
+        }
+
+        .authorContainer{
+            position: relative;
+            display: block;
+
+            ul{
+                text-align: center;
+                left: -10px;
+                list-style: none;
+                display: inline-flex;
+                position: relative;
+
+                .logoContainer{
+                    width: 60px;
+                    height: 60px;
+                    filter: grayscale(1);
+
+                }
+
+                img{
+                    width: 100%;
+                }
+
+                span{
+                    position: relative;
+                    display: block;
+                    top: 4px;
+                    font-size: 20px;
+                }
+
+            }
+
+
+        }
+
+        .links{
+            list-style: none;
+            position: relative;
+            display: block;
+            left: 0;
+            width: 120px;
+            padding: 0;
+            top: -20px;
+
+            h1{
+                font-size: 20px;
+                position: relative;
+                display: block;
+                top: 10px;
+            }
+
+            .link{
+                position: relative;
+                display: block;
+                font-size: 15px;
+            }
+
+        }
+
+
+        a{
+            color: #bdbdbd;
+            text-decoration: underline;
+        }
+
+        .copyrights{
+            position: relative;
+            display: block;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .otherLinks{
+
+            list-style: none;
+            position: relative;
+            display: block;
+            left: 0;
+            width: 120px;
+            padding: 0;
+            top: -20px;
+
+            h1{
+                font-size: 20px;
+                position: relative;
+                display: block;
+                top: 10px;
+            }
+
+            .link{
+                position: relative;
+                display: block;
+                width: 100px;
+                font-size: 15px;
+            }
+
+            
+        }
+        
     }
 
     a{
@@ -260,10 +464,12 @@ html, body{
         width: 90px;
         font-size: 145x;
         text-align: center;
+        border-radius: 7px;
         top: -20px;
     }
 
 }
+
 
 //NAV BAR
 
@@ -313,6 +519,7 @@ html, body{
             padding: 10px 20px;
             color: white;
             text-decoration: none;
+            border-radius: 7px;
             
             .menu-link{
                 color: white;
@@ -320,9 +527,6 @@ html, body{
             }
         }
 
-        .menu-item:nth-child(2){
-            width: 150px;
-        }
     }
 
     .menu.closed {
@@ -359,6 +563,7 @@ html, body{
             padding: 10px 20px;
             color: white;
             text-decoration: none;
+            border-radius: 7px;
             
             .menu-link{
                 color: white;

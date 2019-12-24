@@ -33,16 +33,16 @@ export default class Navbar extends Component {
                         <Link to="/" className="menu-link">Home</Link>
                     </li>
                     <li className="menu-item">
-                        <Link to="/#workflow" className="menu-link">How i work</Link>
+                        <Link to="/store" className="menu-link">Store</Link>
                     </li>
                     <li className="menu-item">
                         <Link to="/portfolio" className="menu-link">Portfolio</Link>
                     </li>
                     <li className="menu-item">
-                        <Link to="/#sources" className="menu-link">Sources</Link>
+                        <a href="#resources" className="menu-link">Resources</a>
                     </li>
                     <li className="menu-item buttonBackground">
-                        <Link to="/#form" className="menu-link">Contact</Link>
+                        <a href="#contact" className="menu-link">Contact</a>
                     </li>
                 </div>
             </ul>

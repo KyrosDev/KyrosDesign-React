@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import Workflow from './models/Workflow';
 import Services from './models/Services';
 import Sources from './models/Sources';
+import Contact from './models/Contact';
 
 export default class Homepage extends Component {
   render() {
@@ -13,7 +14,7 @@ export default class Homepage extends Component {
           <h3 className="studyTitle titles">Web Developer and Designer</h3>
           <h1 className="title titles">KyrosDesign</h1>
           <p className="description">Do like me, build your future, create your style and start your career.</p>
-          <Link to="/" className="buttonBackground buttonHomepage">Contact</Link>
+          <a href="#contact" className="buttonBackground buttonHomepage">Contact</a>
           <img className="backgroundImage" src="" />
           <div className="swipe">
             <span className="ver"/>
@@ -24,6 +25,7 @@ export default class Homepage extends Component {
         <Workflow />
         <Services />
         <Sources />
+        <Contact />
         <Footer />
       </div>
     );
