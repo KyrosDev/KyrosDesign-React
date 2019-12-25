@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 const productSchema = new Schema({
   image: {
     type: String,
-    required: true,
+    required: false,
     unique: false,
     trim: false
   },
@@ -30,7 +30,7 @@ const productSchema = new Schema({
     minlength: 1
   },
   availability: {
-    type: String,
+    type: Boolean,
     required: true,
     unique: false,
     trim: false

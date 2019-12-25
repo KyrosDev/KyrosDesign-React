@@ -1,10 +1,10 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
-const exercisesRouter = require('./routes/exercises');
-const usersRouter = require('./routes/users');
+//const exercisesRouter = require('./routes/exercises');
+//const usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products');
-const Counter = require("./routes/counter");
+const emailRouter = require("./routes/emails");
 
 require('dotenv').config();
 
@@ -26,7 +26,7 @@ app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
 });
 
-app.use('/exercises', exercisesRouter);
-app.use('/users', usersRouter);
+//app.use('/exercises', exercisesRouter);
+//app.use('/users', usersRouter);
 app.use('/products', productsRouter);
-app.use('/counter', Counter);
+app.use('/emails', emailRouter);

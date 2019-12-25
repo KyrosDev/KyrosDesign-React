@@ -4,45 +4,29 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,800");
 ::-webkit-scrollbar {
   width: 7px;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 ::-webkit-scrollbar-track {
-  background: #383c4a;
+  background: white;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   border-radius: 30px;
   background: #4552ff;
-}
-
-@-webkit-keyframes asd {
-  0% {
-    background-position: 0% 11%;
-  }
-  50% {
-    background-position: 100% 90%;
-  }
-  100% {
-    background-position: 0% 11%;
-  }
-}
-
-@keyframes asd {
-  0% {
-    background-position: 0% 11%;
-  }
-  50% {
-    background-position: 100% 90%;
-  }
-  100% {
-    background-position: 0% 11%;
-  }
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #ae7dcf;
+  background: #3841ca;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 * {
@@ -417,7 +401,7 @@ html a:active, body a:active {
   background: white;
   border-radius: 10px;
   left: 5%;
-  height: 410px;
+  height: 470px;
   -webkit-box-shadow: 0px 0px 44px 0px rgba(0, 0, 0, 0.06);
   box-shadow: 0px 0px 44px 0px rgba(0, 0, 0, 0.06);
   margin-bottom: 40px;
@@ -470,7 +454,7 @@ html a:active, body a:active {
   font-size: 15px;
   background: white;
   border: 1px solid #4552ff;
-  bottom: 30px;
+  bottom: 20px;
   left: 10%;
   -webkit-transition: .3s;
   transition: .3s;
