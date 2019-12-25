@@ -7,9 +7,13 @@ $dark: #383c4a;
 $bodyBackground: #3e445d;
 $selection: #d6aaff;
 $buttonsBackground: rgb(174,125,207);
-$buttonsGradient: linear-gradient(90deg, rgb(174, 125, 207) 0%, rgb(110, 107, 255) 100%);
+$buttonsGradient: linear-gradient(90deg, rgb(174, 125, 207) 0%, #4552ff 100%);
 $cardsBackground: #5a679c;
-$footer:#292b31;
+$footer: #222222;
+$subtitleColor: #4b4b4b;
+$titleColor: #292b31;
+$footerColor: #dfdfdf;
+$mainColor: #4552ff;
 
 
 //SCROLLBAR
@@ -56,7 +60,7 @@ html, body{
     margin: 0;
     margin-top: 45px;
     font-family: google sans, poppins, roboto,sans-serif;
-    background: $bodyBackground;
+    background: white;
     width: 100%;
     height: 100%;
     position: relative;
@@ -73,7 +77,7 @@ html, body{
 }
 
 ::selection{
-    background: $selection;
+    background: $mainColor;
     color: white;
 }
 
@@ -108,12 +112,11 @@ html, body{
             width: 100%;
             height: 400px;
             margin-bottom: 50px;
-            background: $cardsBackground;
             border-radius: 10px;
             text-align: center;
-            -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
-            -moz-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, .1);
-            box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, .1);
+            -webkit-box-shadow: 0px 0px 44px 0px rgba(0,0,0,0.06);
+            -moz-box-shadow: 0px 0px 44px 0px rgba(0,0,0,0.06);
+            box-shadow: 0px 0px 44px 0px rgba(0,0,0,0.06);
 
             .logoContainer{
                 position: relative;
@@ -124,10 +127,6 @@ html, body{
                 padding: 20px;
                 border-radius: 200px;
                 top: 20px;
-                background: $buttonsBackground;
-                //background: $buttonsGradient;
-                //background-size: 300px 300px;
-                //animation: example 3s ease infinite;
 
                 img{
                     position: relative;
@@ -146,6 +145,7 @@ html, body{
                 top: 20px;
                 left: 50%;
                 transform: translate(-50%, 0);
+                color: $titleColor;
             }
 
             .workflowItemSubtitle{
@@ -156,6 +156,7 @@ html, body{
                 left: 50%;
                 color: #dfdfdf;
                 transform: translate(-50%, 0);
+                color: $subtitleColor;
             }
 
         }
@@ -163,12 +164,116 @@ html, body{
     }
 }
 
+.services{
+    position: relative;
+    display: block;
+    padding: 20px 0;
+    width: 100%;
+
+    ul{
+        list-style: none;
+
+        li{
+            width: 70%;
+            margin: 0 auto;
+            height: auto;
+            padding: 20px 20px;
+            border-radius: 10px;
+            margin-bottom: 50px;
+            color: $titleColor;
+            -webkit-box-shadow: 0px 0px 44px 0px rgba(0,0,0,0.06);
+            -moz-box-shadow: 0px 0px 44px 0px rgba(0,0,0,0.06);
+            box-shadow: 0px 0px 44px 0px rgba(0,0,0,0.06);
+
+            .serviceTitle{
+                width: calc(100% - 10px);
+                left: 10px;
+                position: relative;
+                display: block;
+                font-size: 20px;
+            }
+
+            .serviceDescription{
+                width: calc(100% - 10px);
+                left: 10px;
+                position: relative;
+                display: block;
+                color: $subtitleColor !important;
+            }
+
+        }
+
+        li:last-child{
+            margin-bottom: 0px;
+        }
+
+    }
+}
+
+.button{
+    position: relative;
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    top: 120%;
+    border-radius: 7px;
+    background: none;
+    color: $mainColor;
+    border: 2px solid $mainColor;
+    transition: .3s;
+}
+
+.moreButton{
+    width: 200px;
+    background: $mainColor;
+    border: 2px solid $mainColor;
+    color: white;
+    margin: auto;
+    font-size: 14px;
+}
+
+.moreButton:hover{
+    background: white;
+    color: $mainColor;
+}
+
 .resources{
 
+    padding: 20px 0;
     width: 100%;
     height: auto;
     position: relative;
     display: block;
+    background: white;
+
+    .moreButton:hover{
+        background: white;
+        color: $mainColor;
+    }
+    
+    .sectionTitle{
+        color: $titleColor;
+    }
+
+    .sectionSubtitle{
+        color: $subtitleColor !important;
+    }
+
+    .newSource{
+        position: relative;
+        display: block;
+        color: $mainColor;
+        padding: 3px 6px;
+        width: 28px;
+        height: auto;
+        border-radius: 5px;
+        text-align: center;
+        border: 2px solid $mainColor;
+        font-size: 11px;
+        top: 110px;
+        left: 93%;
+        transform: translate(-70%, -60px);
+    }
 
     .resourcesContainer{
         position: relative;
@@ -189,10 +294,13 @@ html, body{
             li{
                 width: 100%;
                 height: auto;
-                padding-bottom: 5px;
-                background: $cardsBackground;
+                padding-bottom: 1px;
                 border-radius: 10px;
                 margin-bottom: 50px 0;
+                color: $titleColor;
+                -webkit-box-shadow: 0px 0px 44px 0px rgba(0,0,0,0.06);
+                -moz-box-shadow: 0px 0px 44px 0px rgba(0,0,0,0.06);
+                box-shadow: 0px 0px 44px 0px rgba(0,0,0,0.06);
 
                 h1{
                     position: relative;
@@ -208,11 +316,13 @@ html, body{
                     margin: 0;
                     top: 0px;
                     position: relative;
+                    color: $subtitleColor !important;
                 }
 
-                p{
+                p.sourceDescription{
                     position: relative;
                     display: block;
+                    color: $subtitleColor !important;
                 }
 
                 a{
@@ -222,6 +332,15 @@ html, body{
                     padding: 10px 0;
                     top: 120%;
                     border-radius: 7px;
+                    background: none;
+                    color: $mainColor;
+                    border: 2px solid $mainColor;
+                    transition: .3s;
+                }
+
+                a:hover{
+                    background: $mainColor;
+                    color: white;
                 }
 
             }
@@ -257,12 +376,14 @@ html, body{
         position: relative;
         display: block;
         width: 100%;
+        background: white;
 
         .sectionTitle {
             position: relative;
             display: block;
             font-size: 27px;
             text-align: center;
+            color: $titleColor;
         }
 
         .sectionSubtitle{
@@ -272,7 +393,7 @@ html, body{
             width: 250px;
             top: -20px;
             text-align: center;
-            color: #dfdfdf;
+            color: $subtitleColor;
             font-weight: 400;
             margin: 0 auto;
         }
@@ -284,10 +405,13 @@ html, body{
         position: relative;
         display: block;
         width: 90%;
-        background: $dark;
+        background: white;
         border-radius: 10px;
         left: 5%;
         height: 410px;
+        -webkit-box-shadow: 0px 0px 44px 0px rgba(0,0,0,0.06);
+        -moz-box-shadow: 0px 0px 44px 0px rgba(0,0,0,0.06);
+        box-shadow: 0px 0px 44px 0px rgba(0,0,0,0.06);
         margin-bottom: 40px;
 
         .inputs{
@@ -296,11 +420,21 @@ html, body{
             display: block;
             width: 70%;
             height: 20px;
-            border-radius: 7px;
+            border-radius: 10px 0 10px 0;
             border: none;
             outline: none;
+            color: $subtitleColor;
             padding: 10px 15px;
             margin: 15px auto;
+            -webkit-box-shadow: 0px 0px 44px 0px rgba(0,0,0,0.08);
+            -moz-box-shadow: 0px 0px 44px 0px rgba(0,0,0,0.08);
+            box-shadow: 0px 0px 44px 0px rgba(0,0,0,0.08);
+            border: 1px solid white;
+            transition: .3s;
+        }
+
+        .inputs:focus{
+            border: 1px solid $mainColor;
         }
 
         textarea{
@@ -312,20 +446,29 @@ html, body{
             font-family: google sans, poppins, roboto,sans-serif;
         }
 
-        .button{
+        .formButton{
             position: absolute;
             display: block;
             width: 80%;
             margin: 10px auto;
             padding: 10px;
             font-size: 20px;
+            font-family: google sans, poppins, roboto,sans-serif;
             border-radius: 7px;
             border: none;
             outline: none;
-            color: white;
+            color: $mainColor;
+            font-size: 15px;
+            background: white;
+            border: 1px solid $mainColor;
             bottom: 30px;
             left: 10%;
-            
+            transition: .3s;
+        }
+
+        .formButton:hover{
+            color: white;
+            background: $mainColor;
         }
 
     }
@@ -337,7 +480,7 @@ html, body{
         width: 100%;
         height: auto;
         background: $footer;
-        color: #bdbdbd;
+        color: $footerColor;
     }
 
     .footerContainer{
@@ -361,7 +504,7 @@ html, body{
         }
 
         a{
-            color: #bdbdbd;
+            color: $footerColor;
             text-decoration: none;
             transition: .3s;
         }
@@ -413,7 +556,7 @@ html, body{
                 img{
                     width: 40%;
                     position: relative;
-                    opacity: .6;
+                    opacity: .8;
                     top: -5px;
                 }
 
@@ -504,6 +647,7 @@ html, body{
         h3{
             font-size: 14px;
             font-weight: 400;
+            color: $subtitleColor;
         }
 
         h1{
@@ -511,12 +655,14 @@ html, body{
             display: block;
             font-size: 30px;
             top: -20px;
+            color: $titleColor;
         }
 
         p{
             position: relative;
             display: block;
             top: -20px;
+            color: $subtitleColor
         }
 
         .swipe{
@@ -536,7 +682,7 @@ html, body{
                 width: 3px;
                 border-radius: 100px;
                 height: 40px;
-                background-color: white;
+                background-color: $subtitleColor;
             }
 
             .arr{
@@ -545,7 +691,7 @@ html, body{
                 width: 20px;
                 height: 3px;
                 border-radius: 100px;
-                background-color: white;
+                background-color: $subtitleColor;
                 transform: translate(100%, 0);
             }
 
@@ -584,8 +730,10 @@ html, body{
         width: 90px;
         font-size: 145x;
         text-align: center;
-        border-radius: 7px;
+        border-radius: 10px 2px 10px 2px;
         top: -20px;
+        margin: 2px;
+        border: 2px solid transparent;
     }
 
 }
@@ -593,17 +741,17 @@ html, body{
 //NAV BAR
 
 .navbar{
-    top: -1px;
+    top: 1px;
     width: 100%;
     height: 65px;
-    background: $dark;
+    background: white !important;
     position: fixed;
     display: block;
     z-index: 111;
     transition: .3s;
-    -webkit-box-shadow: 0px 0px 20px -1px rgba(30,33,41,.6);
-    -moz-box-shadow: 0px 0px 20px -1px rgba(30,33,41,.6);
-    box-shadow: 0px 0px 20px -1px rgba(30,33,41,.6);
+    -webkit-box-shadow: 0px 0px 20px -1px rgba(30,33,41,.3);
+    -moz-box-shadow: 0px 0px 20px -1px rgba(30,33,41,.3);
+    box-shadow: 0px 0px 20px -1px rgba(30,33,41,.3);
 
 
     .menu.opened{
@@ -612,8 +760,8 @@ html, body{
         display: block;
         width: 100%;
         opacity: 1;
-        color: white;
-        background: $dark;
+        color: $titleColor;
+        background: white;
         text-align: center;
         padding: 0;
         height: calc(100vh - 61px);
@@ -639,11 +787,29 @@ html, body{
             color: white;
             text-decoration: none;
             border-radius: 7px;
+            transition: .3s;
             
             .menu-link{
-                color: white;
+                color: $titleColor;
                 text-decoration: none;
             }
+
+        }
+        
+        .menu-item:nth-child(5) .menu-link{
+            color: $mainColor;
+        }
+
+        .menu-item:nth-child(5){
+            border: 2px solid $mainColor;
+        }
+
+        .menu-item:nth-child(5):hover{
+            background: $mainColor;
+        }
+
+        .menu-item:nth-child(5):hover .menu-link{
+            color: white;
         }
 
     }
@@ -657,7 +823,7 @@ html, body{
         width: 100%;
         height: 0%;
         color: white;
-        background: $dark;
+        background: white;
         text-align: center;
         padding: 0;
         height: 0%;
@@ -683,14 +849,29 @@ html, body{
             color: white;
             text-decoration: none;
             border-radius: 7px;
+            transition: .3s;
             
             .menu-link{
-                color: white;
+                color: $titleColor;
                 text-decoration: none;
             }
+
         }
-        .menu-item:nth-child(2){
-            width: 150px;
+        
+        .menu-item:nth-child(5) .menu-link{
+            color: $mainColor;
+        }
+
+        .menu-item:nth-child(5){
+            border: 2px solid $mainColor;
+        }
+
+        .menu-item:nth-child(5):hover{
+            background: $mainColor;
+        }
+
+        .menu-item:nth-child(5):hover .menu-link{
+            color: white;
         }
     }
 
@@ -708,7 +889,7 @@ html, body{
             position: absolute;
             display: inline-flex;
             top: 7px;
-            color: white;
+            color: $titleColor;
             font-size: 20px;
         }
         img{
@@ -730,7 +911,7 @@ html, body{
             height: 3px;
             position: absolute;
             display: block;
-            background-color: white;
+            background-color: $subtitleColor;
             margin: 10px;
             transform: translate(0, -50%);
             right: 20px;

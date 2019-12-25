@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 
-const services = ["1", "2", "3"];
+const services = ["UI Design", "UX Design", "Web Development", "Graphic Design"];
+const descriptions = ["Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il.", "Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il.", "Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il.", "Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il."]
 const items = [];
 
 for (const [index, value] of services.entries()) {
   items.push(
-    <li key={index}>{value}</li>
+    <li className="service" key={index}>
+      <h1 className="serviceTitle">{value}</h1>
+      <p className="serviceDescription">{descriptions[index]}</p>
+      <Link to="/" className="button moreButton">Learn more</Link>
+    </li>
   );
 }
 

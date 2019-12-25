@@ -10,7 +10,7 @@ export default class Contact extends Component {
             <div className="contactContainer">
                 <input autoComplete="off" placeholder="Your email..." required type="email" className="inputs"  id="email"name="email"/>
                 <textarea placeholder="Message..." required height="200px" cols="20" type="text" className="inputs" id="message" name="message"/>
-                <input type="submit" className="button buttonBackground" text="Submit"/>
+                <input type="submit" className="formButton" text="Submit"/>
             </div>
         </form>
       </section>

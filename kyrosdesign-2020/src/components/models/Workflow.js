@@ -10,7 +10,7 @@ export default class Workflow extends Component {
             <h1 className="sectionTitle">Work Process</h1>
             <h3 className="sectionSubtitle">Here I will explain how I work and how I proceed in creating my works</h3>
             <div className="workFlowContainer">
-                <ul classList="workFlowList">
+                <ul className="workFlowList">
                     <li className="workflowItem">
                         <div className="logoContainer">
                             <img src={drafts} alt="Drafts"/>

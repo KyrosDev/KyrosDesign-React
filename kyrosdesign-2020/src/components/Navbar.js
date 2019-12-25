@@ -1,5 +1,5 @@
 import React, { Component} from 'react';
-import logo from "./img/logo.png"
+import logo from "./img/logoBlack.png"
 import {Link} from "react-router-dom";
 
 export default class Navbar extends Component {
@@ -41,7 +41,7 @@ export default class Navbar extends Component {
                     <li className="menu-item">
                         <Link to="/#resources" className="menu-link">Resources</Link>
                     </li>
-                    <li className="menu-item buttonBackground">
+                    <li className="menu-item">
                         <Link to="/#contact" className="menu-link">Contact</Link>
                     </li>
                 </div>
