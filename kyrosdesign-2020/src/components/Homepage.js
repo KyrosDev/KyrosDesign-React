@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Footer from "./Footer";
-import Workflow from './models/Workflow';
-import Services from './models/Services';
-import Sources from './models/Sources';
-import Contact from './models/Contact';
+import Workflow from './containers/Workflow';
+import Services from './containers/Services';
+import Sources from './containers/Sources';
+import Contact from './containers/Contact';
 
 export default class Homepage extends Component {
   render() {

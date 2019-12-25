@@ -6,6 +6,7 @@ import Gallery from "./components/Gallery";
 import Default from "./components/Default";
 import Details from "./components/Details";
 import Homepage from "./components/Homepage";
+import createProduct from "./components/build/createProduct"
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route exact path="/" component={Homepage} />
         <Route path="/portfolio" component={Gallery} />
         <Route path="/image" component={Details}/>
+        <Route path="/products/create" component={createProduct}/>
         <Route component={Default} />
       </Switch>
     </React.Fragment>
