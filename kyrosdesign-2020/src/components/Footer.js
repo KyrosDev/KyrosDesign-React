@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import arrowRight from './img/right-arrow (1).svg'
-import logo from "./img/logo.png";
+import logo from "./img/logoBlack.png";
 
 export default class Footer extends Component {
   render() {

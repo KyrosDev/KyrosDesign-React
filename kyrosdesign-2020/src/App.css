@@ -13,14 +13,7 @@
 /* Handle */
 ::-webkit-scrollbar-thumb {
   border-radius: 30px;
-  background: -webkit-gradient(linear, left top, right top, from(#ae7dcf), to(#4552ff));
-  background: linear-gradient(90deg, #ae7dcf 0%, #4552ff 100%);
-  background-size: 400px 400px;
-  background-position: 0% 11%;
-  -webkit-box-shadow: 0px 0px 25px 0px rgba(110, 107, 255, 0.302);
-  box-shadow: 0px 0px 25px 0px rgba(110, 107, 255, 0.3);
-  -webkit-animation: asd 7s ease infinite;
-          animation: asd 7s ease infinite;
+  background: #4552ff;
 }
 
 @-webkit-keyframes asd {
@@ -52,10 +45,13 @@
   background: #ae7dcf;
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 html, body {
   padding: 0;
-  margin: 0;
-  margin-top: 45px;
+  margin: 35px 0;
   font-family: google sans, poppins, roboto,sans-serif;
   background: white;
   width: 100%;
@@ -242,6 +238,21 @@ html a:active, body a:active {
   position: relative;
   display: block;
   background: white;
+  /*.newSource{
+        position: relative;
+        display: block;
+        color: $mainColor;
+        padding: 3px 6px;
+        width: 28px;
+        height: auto;
+        border-radius: 5px;
+        text-align: center;
+        border: 2px solid $mainColor;
+        font-size: 11px;
+        top: 110px;
+        left: 93%;
+        transform: translate(-70%, -60px);
+    }*/
 }
 
 .resources .moreButton:hover {
@@ -257,43 +268,37 @@ html a:active, body a:active {
   color: #4b4b4b !important;
 }
 
-.resources .newSource {
-  position: relative;
-  display: block;
-  color: #4552ff;
-  padding: 3px 6px;
-  width: 28px;
-  height: auto;
-  border-radius: 5px;
-  text-align: center;
-  border: 2px solid #4552ff;
-  font-size: 11px;
-  top: 110px;
-  left: 93%;
-  -webkit-transform: translate(-70%, -60px);
-          transform: translate(-70%, -60px);
-}
-
 .resources .resourcesContainer {
   position: relative;
   display: block;
-  width: 90%;
+  width: 100%;
   height: auto;
   margin-bottom: 30px;
 }
 
 .resources .resourcesContainer .sourceContainer {
-  width: 90%;
+  position: relative;
+  display: block;
+  width: 80%;
   margin: 20px auto;
   text-align: center;
 }
 
 .resources .resourcesContainer ul {
+  position: relative;
+  display: block;
+  margin: 0 auto;
   list-style: none;
+  padding: 0;
 }
 
 .resources .resourcesContainer ul li {
-  width: 100%;
+  position: relative;
+  display: block;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: 80%;
   height: auto;
   padding-bottom: 1px;
   border-radius: 10px;
@@ -458,7 +463,7 @@ html a:active, body a:active {
   padding: 10px;
   font-size: 20px;
   font-family: google sans, poppins, roboto,sans-serif;
-  border-radius: 7px;
+  border-radius: 7px 0 7px 0;
   border: none;
   outline: none;
   color: #4552ff;
@@ -479,8 +484,9 @@ html a:active, body a:active {
 .container footer {
   width: 100%;
   height: auto;
-  background: #222222;
-  color: #dfdfdf;
+  background: #ffffff;
+  border-top: 1px solid #bbbbbb;
+  color: #5c5c5c;
 }
 
 .container .footerContainer {
@@ -504,7 +510,7 @@ html a:active, body a:active {
 }
 
 .container .footerContainer a {
-  color: #dfdfdf;
+  color: #5c5c5c;
   text-decoration: none;
   -webkit-transition: .3s;
   transition: .3s;
@@ -519,7 +525,7 @@ html a:active, body a:active {
 }
 
 .container .footerContainer ul .link:hover a {
-  color: white;
+  color: #383838;
   text-decoration: underline;
 }
 
@@ -762,12 +768,11 @@ html a:active, body a:active {
   border-radius: 10px 2px 10px 2px;
   top: -20px;
   margin: 2px;
-  border: 2px solid transparent;
 }
 
 .navbar {
-  top: 1px;
   width: 100%;
+  top: 0px;
   height: 65px;
   background: white !important;
   position: fixed;
@@ -985,5 +990,13 @@ html a:active, body a:active {
   top: -22px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+
+.navbar.up {
+  top: -65px;
+}
+
+.navbar.down {
+  top: 0;
 }
 /*# sourceMappingURL=App.css.map */
