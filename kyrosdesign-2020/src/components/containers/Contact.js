@@ -9,7 +9,10 @@ export default class Contact extends Component {
     this.state = {
       email: '',
       name: '',
-      message: ''
+      message: '',
+      success: false,
+      isSended: false,
+      error: "",
     }
 
     this.onChangeName = this.onChangeName.bind(this);
@@ -46,13 +49,34 @@ export default class Contact extends Component {
       message: this.state.message,
     }
 
-    axios.post('http://localhost:5000/emails/new', email).then(res => console.log(res.data));
+    axios.post('http://localhost:5000/emails/new', email).then(res => {
+      if (res.status === 200) {
+        this.setState({
+          success: true,
+          isSended: true
+        });
+      } else {
+        this.setState({
+          success: false,
+          isSended: false,
+          error: res.data
+        });
+      }
+
+    });
 
     this.setState({
       name: '',
       email: '',
       message: '',
+      isSended: true,
     });
+
+    setInterval(() => {
+      this.setState({
+        isSended: false
+      });
+    }, 5000)
   }
 
   render() {
@@ -60,8 +84,9 @@ export default class Contact extends Component {
         <section className="contactForm">
             <h1 className="sectionTitle">Contact Us</h1>
             <h3 className="sectionSubtitle">Compile this form to send us an email.</h3>
-            <form onSubmit={this.onSubmit}>
+            <form onSubmit={this.onSubmit} className={this.state.isSended ? "mailSended": null}>
             <div className="contactContainer">
+                {this.state.isSended ? this.state.success ? <h1 className="messages success">Sendend correctly!</h1> : <h1 className="messages failed">Error, retry. {this.state.error}</h1> : null}
                 <input autoComplete="off" placeholder="Your name..." onChange={this.onChangeName} required type="text" className="inputs"  id="name" name="name" value={this.state.name}/>
                 <input autoComplete="off" placeholder="Your email..." onChange={this.onChangeEmail} required type="email" className="inputs"  id="email" name="email" value={this.state.email}/>
                 <textarea placeholder="Message..." autoComplete="off" required height="200px" onChange={this.onChangeMessage} cols="20" type="text" className="inputs" id="message" name="message" value={this.state.message}/>

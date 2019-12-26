@@ -407,6 +407,23 @@ html a:active, body a:active {
   margin-bottom: 40px;
 }
 
+.container form .messages {
+  color: red;
+  position: relative;
+  display: block;
+  font-size: 20px;
+  text-align: center;
+  top: 20px;
+}
+
+.container form .success {
+  color: #4552ff;
+}
+
+.container form .failed {
+  color: red;
+}
+
 .container form .inputs {
   top: 30px;
   position: relative;
@@ -463,6 +480,10 @@ html a:active, body a:active {
 .container form .formButton:hover {
   color: white;
   background: #4552ff;
+}
+
+.container .mailSended {
+  height: 500px;
 }
 
 .container footer {
@@ -982,5 +1003,153 @@ html a:active, body a:active {
 
 .navbar.down {
   top: 0;
+}
+
+.mailsContainer {
+  top: 50px;
+  width: 80%;
+  left: 10%;
+  height: auto;
+  display: block;
+  position: relative;
+}
+
+.mailsContainer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mailsContainer ul li {
+  width: calc(100% - 80px);
+  padding: 20px 40px;
+  margin: 50px 0;
+  margin-bottom: 100px;
+  border-radius: 20px 0 20px 0;
+  -webkit-box-shadow: 0px 0px 44px 0px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 0px 44px 0px rgba(0, 0, 0, 0.08);
+}
+
+.mailsContainer ul li .username {
+  display: block;
+  position: relative;
+  font-size: 30px;
+  color: #292b31;
+}
+
+.mailsContainer ul li .useremail {
+  position: relative;
+  display: block;
+  top: -25px;
+  color: #4b4b4b;
+  font-weight: 500;
+}
+
+.mailsContainer ul li .usermaildate {
+  position: relative;
+  display: block;
+  top: -30px;
+  color: #292b31;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.mailsContainer ul li .usermessage {
+  position: relative;
+  display: block;
+  top: -25px;
+  color: #4b4b4b;
+  font-weight: 500;
+}
+
+.mailsContainer ul li .sendMailButton {
+  position: relative;
+  display: block;
+  background: #4552ff;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 0;
+  margin: 0 auto;
+  border-radius: 20px 0 20px 0;
+  border: 2px solid #4552ff;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.mailsContainer ul li .sendMailButton:hover {
+  color: #4552ff;
+  background: white;
+}
+
+.mailsContainer ul li .newMail {
+  position: relative;
+  display: block;
+  border: 2px solid #4552ff;
+  color: #4552ff;
+  padding: 2px 3px;
+  text-align: center;
+  border-radius: 7px;
+  font-size: 14px;
+  width: 40px;
+  top: 10px;
+  float: right;
+  right: 0;
+}
+
+.loader {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  display: block;
+  background: white;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 1113;
+}
+
+.loader span:nth-child(1) {
+  border: 16px solid #f3f3f3;
+  /* Light grey */
+  border-top: 16px solid #4552ff;
+  /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  position: relative;
+  display: block;
+  height: 120px;
+  top: 50%;
+  margin: 0 auto;
+  padding: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: .3s;
+  transition: .3s;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 /*# sourceMappingURL=App.css.map */

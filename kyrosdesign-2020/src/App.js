@@ -6,7 +6,8 @@ import Gallery from "./components/Gallery";
 import Default from "./components/Default";
 import Details from "./components/Details";
 import Homepage from "./components/Homepage";
-import createProduct from "./components/build/createProduct"
+import createProduct from "./components/build/createProduct";
+import admMails from "./admin/components/adminMails";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/portfolio" component={Gallery} />
         <Route path="/image" component={Details}/>
         <Route path="/products/create" component={createProduct}/>
+        <Route path="/admin/emails" component={admMails}/>
         <Route component={Default} />
       </Switch>
     </React.Fragment>
