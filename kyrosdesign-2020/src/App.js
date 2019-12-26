@@ -12,7 +12,7 @@ import admMails from "./admin/components/adminMails";
 function App() {
   return (
     <React.Fragment>
-      <Navbar />
+    <Navbar />
       <Switch>
         <Route exact path="/" component={Homepage} />
         <Route path="/portfolio" component={Gallery} />

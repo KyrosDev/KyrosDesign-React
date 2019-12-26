@@ -699,8 +699,8 @@ html a:active, body a:active {
   bottom: 90px;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
-  -webkit-animation: swipe 2s ease infinite;
-          animation: swipe 2s ease infinite;
+  -webkit-animation: swipe 2s cubic-bezier(0.79, 0, 0.32, 0.99) infinite;
+          animation: swipe 2s cubic-bezier(0.79, 0, 0.32, 0.99) infinite;
   -webkit-box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.04);
   box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.04);
 }
@@ -1007,31 +1007,45 @@ html a:active, body a:active {
 
 .mailsContainer {
   top: 50px;
-  width: 80%;
-  left: 10%;
+  width: calc(80% - 79px);
+  left: 50%;
   height: auto;
   display: block;
   position: relative;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 
 .mailsContainer ul {
   list-style: none;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 50%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .mailsContainer ul li {
-  width: calc(100% - 80px);
+  width: 660px;
   padding: 20px 40px;
-  margin: 50px 0;
-  margin-bottom: 100px;
+  margin: 50px;
+  margin-bottom: 30px;
+  margin-right: 70px;
   border-radius: 20px 0 20px 0;
   -webkit-box-shadow: 0px 0px 44px 0px rgba(0, 0, 0, 0.08);
   box-shadow: 0px 0px 44px 0px rgba(0, 0, 0, 0.08);
 }
 
-.mailsContainer ul li .username {
-  display: block;
+.mailsContainer ul li .dataContainer {
   position: relative;
+  display: block;
+  height: 320px;
+}
+
+.mailsContainer ul li .username {
+  width: 250px;
   font-size: 30px;
   color: #292b31;
 }
@@ -1062,7 +1076,7 @@ html a:active, body a:active {
 }
 
 .mailsContainer ul li .sendMailButton {
-  position: relative;
+  position: static;
   display: block;
   background: #4552ff;
   color: white;
@@ -1070,7 +1084,6 @@ html a:active, body a:active {
   text-align: center;
   text-decoration: none;
   padding: 10px 0;
-  margin: 0 auto;
   border-radius: 20px 0 20px 0;
   border: 2px solid #4552ff;
   -webkit-transition: .3s;
@@ -1097,13 +1110,17 @@ html a:active, body a:active {
   right: 0;
 }
 
+.mailsContainer ul li:nth-child(even) {
+  margin-right: 0;
+}
+
 .loader {
   width: 100%;
   height: 100vh;
   position: fixed;
   display: block;
   background: white;
-  top: 0;
+  top: -65px;
   left: 0;
   margin: 0;
   padding: 0;
@@ -1150,6 +1167,289 @@ html a:active, body a:active {
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+  }
+}
+
+@media only screen and (min-width: 360px) and (min-height: 640px) {
+  .homePage {
+    top: 130px !important;
+    width: 300px !important;
+    left: 30px !important;
+  }
+  .homePage .title {
+    font-size: 40px !important;
+  }
+  .homePage .buttonHomepage {
+    font-size: 20px;
+    width: +130px;
+  }
+  .homePage .swipe {
+    position: absolute !important;
+    display: block !important;
+    margin: auto !important;
+    bottom: 130px !important;
+    -webkit-transform: translate(0, -130%) !important;
+            transform: translate(0, -130%) !important;
+    -webkit-animation: swipe 2s cubic-bezier(0.79, 0, 0.32, 0.99) infinite;
+            animation: swipe 2s cubic-bezier(0.79, 0, 0.32, 0.99) infinite;
+    -webkit-box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.04);
+    box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.04);
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .homePage {
+    top: 160px !important;
+    width: 400px !important;
+    left: 30px !important;
+  }
+  .homePage .title {
+    font-size: 40px !important;
+  }
+  .homePage .description {
+    font-size: 25px;
+  }
+  .homePage .buttonHomepage {
+    font-size: 20px;
+    width: +130px;
+  }
+  .homePage .swipe {
+    position: absolute !important;
+    display: block !important;
+    left: 51% !important;
+    margin: 0 auto !important;
+    bottom: 130px !important;
+    -webkit-transform: translate(0, -200%) !important;
+            transform: translate(0, -200%) !important;
+    -webkit-animation: swipe 2s cubic-bezier(0.79, 0, 0.32, 0.99) infinite;
+            animation: swipe 2s cubic-bezier(0.79, 0, 0.32, 0.99) infinite;
+    -webkit-box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.04);
+    box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.04);
+  }
+  .homePage .swipe .ver {
+    height: 60px !important;
+    width: 4px !important;
+  }
+  .homePage .swipe .arr {
+    height: 4px !important;
+    width: 35px !important;
+  }
+  .homePage .swipe .arr:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    left: -4px !important;
+    top: 45px !important;
+  }
+  .homePage .swipe .arr:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    left: -27px !important;
+    top: 45px !important;
+  }
+  .workFlowContainer {
+    width: 70% !important;
+  }
+  .workFlowContainer ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+  }
+  .workFlowContainer ul li {
+    width: 100% !important;
+  }
+  .workFlowContainer ul .workflowItemTitle {
+    position: relative;
+    display: block;
+    font-size: 20px;
+    width: 200px;
+    top: 20px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    color: #292b31;
+  }
+  .workFlowContainer ul .workflowItemSubtitle {
+    position: relative;
+    display: block;
+    width: 200px;
+    top: 20px;
+    left: 50%;
+    color: #dfdfdf;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    color: #4b4b4b;
+  }
+  .services li {
+    width: 60% !important;
+  }
+  .resourcesContainer li {
+    width: 70% !important;
+    margin-bottom: 70px !important;
+  }
+  .contactForm {
+    width: 80% !important;
+    margin: 0 auto !important;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .homePage {
+    top: 160px !important;
+    width: 400px !important;
+    left: 130px !important;
+  }
+  .homePage .title {
+    font-size: 40px !important;
+  }
+  .homePage .description {
+    font-size: 25px;
+  }
+  .homePage .buttonHomepage {
+    font-size: 20px;
+    width: +130px;
+    padding: 20px 30px !important;
+  }
+  .homePage .swipe {
+    position: absolute !important;
+    display: block !important;
+    left: 63% !important;
+    margin: 0 auto !important;
+    bottom: 130px !important;
+    -webkit-transform: translate(0, -200%) !important;
+            transform: translate(0, -200%) !important;
+    -webkit-animation: swipe 2s cubic-bezier(0.79, 0, 0.32, 0.99) infinite;
+            animation: swipe 2s cubic-bezier(0.79, 0, 0.32, 0.99) infinite;
+    -webkit-box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.04);
+    box-shadow: 0px 0px 26px 0px rgba(0, 0, 0, 0.04);
+  }
+  .homePage .swipe .ver {
+    height: 60px !important;
+    width: 4px !important;
+  }
+  .homePage .swipe .arr {
+    height: 4px !important;
+    width: 35px !important;
+  }
+  .homePage .swipe .arr:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    left: -4px !important;
+    top: 45px !important;
+  }
+  .homePage .swipe .arr:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    left: -27px !important;
+    top: 45px !important;
+  }
+  .sectionTitle {
+    font-size: 35px !important;
+  }
+  .sectionSubtitle {
+    font-size: 17px !important;
+  }
+  .workFlowContainer {
+    width: 50% !important;
+  }
+  .workFlowContainer ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+  }
+  .workFlowContainer ul li {
+    width: 100% !important;
+  }
+  .workFlowContainer ul .workflowItemTitle {
+    position: relative;
+    display: block;
+    font-size: 20px;
+    width: 200px;
+    top: 20px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    color: #292b31;
+  }
+  .workFlowContainer ul .workflowItemSubtitle {
+    position: relative;
+    display: block;
+    width: 200px;
+    top: 20px;
+    left: 50%;
+    color: #dfdfdf;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    color: #4b4b4b;
+  }
+  .services ul {
+    position: relative !important;
+  }
+  .services li {
+    width: 40% !important;
+    height: 250px !important;
+  }
+  .services li:nth-child(1) .button {
+    top: 20px !important;
+  }
+  .services li:nth-child(2) .button {
+    top: 20px !important;
+  }
+  .services li:nth-child(3) .button {
+    top: 20px !important;
+  }
+  .services li:nth-child(4) .button {
+    top: 20px !important;
+  }
+  .resourcesContainer {
+    width: 100% !important;
+  }
+  .resourcesContainer li {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-wrap: wrap !important;
+        flex-wrap: wrap !important;
+    width: 40% !important;
+    margin-bottom: 70px !important;
+  }
+  .resourcesContainer li .button {
+    position: relative !important;
+    top: 0 !important;
+  }
+  .contactForm {
+    width: 70% !important;
+    margin: 0 auto !important;
+  }
+  .contactForm .formButton {
+    width: 75% !important;
+    left: 50% !important;
+    -webkit-transform: translate(-50%, 0) !important;
+            transform: translate(-50%, 0) !important;
+  }
+  footer {
+    overflow: hidden;
+  }
+  footer .authorContainer {
+    margin: 0 !important;
+    left: 10% !important;
+    position: relative !important;
+    display: block !important;
+    top: 130px !important;
+    margin-left: 0px !important;
+  }
+  footer .footerLinks {
+    position: relative !important;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    left: 50% !important;
+  }
+  footer .footerLinks ul {
+    margin-right: 30px !important;
   }
 }
 /*# sourceMappingURL=App.css.map */

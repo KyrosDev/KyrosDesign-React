@@ -14,12 +14,14 @@ axios.get('http://localhost:5000/emails').then(res => {
         for (let i = 0; i < value.length; i++) {
             mails.push(
                 <li className="emails" key={index}>
-                    {parseInt(nowList[1]) - new Date(value[i].createdAt).toUTCString().split(" ")[1] <= 4?<span className="newMail">New</span>: null}
-                    <h1 className="username">{value[i].name}</h1>
-                    <h3 className="useremail">{value[i].email}</h3>
-                    <p className="usermaildate">{new Date(value[i].createdAt).toUTCString().split(" ")[::3]}</p>
-                    <p className="usermessage">{value[i].message}</p>
-                    <a className="sendMailButton" href={`https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=${value[i].email}`} target="_blank" rel="noopener noreferrer">Send email</a>
+                    <div className="dataContainer">
+                        {parseInt(nowList[1]) - new Date(value[i].createdAt).toUTCString().split(" ")[1] <= 4?<span className="newMail">New</span>: null}
+                        <h1 className="username">{value[i].name}</h1>
+                        <h3 className="useremail">{value[i].email}</h3>
+                        <p className="usermaildate">{new Date(value[i].createdAt).toUTCString().split(" ").slice(0, 4).join(" ")}</p>
+                        <p className="usermessage">{value[i].message}</p>
+                    </div>
+                    <a className="sendMailButton" href={`mailto:${value[i].email}`} target="_blank" rel="noopener noreferrer">Send email</a>
                 </li>
             );
         }
