@@ -22,19 +22,19 @@ export default class Footer extends Component {
             <ul className="otherLinks">
               <h1 className="listTitle">Socials</h1>
               <li className="link">
-                <a href="https://www.instagram.com/__v.alecs__" rel="noopener noreferrer" target="_blank">Instagram</a><span className="arrow"><img src={arrowRight} alt=""/></span>
+                <a href="https://www.instagram.com/__v.alecs__" rel="noopener noreferrer" target="_blank">Instagram</a>
               </li>
               <li className="link">
-                <a href="https://www.github.com/KyrosDev" rel="noopener noreferrer" target="_blank">GitHub</a><span className="arrow"><img src={arrowRight} alt=""/></span>
+                <a href="https://www.github.com/KyrosDev" rel="noopener noreferrer" target="_blank">GitHub</a>
               </li>
               <li className="link">
-                <a href="https://www.twitter.com/KyrosDes" rel="noopener noreferrer" target="_blank">Twitter</a><span className="arrow"><img src={arrowRight} alt=""/></span>
+                <a href="https://www.twitter.com/KyrosDes" rel="noopener noreferrer" target="_blank">Twitter</a>
               </li>
               <li className="link">
-                <a href="/" rel="noopener noreferrer" target="_blank">YouTube</a><span className="arrow"><img src={arrowRight} alt=""/></span>
+                <a href="/" rel="noopener noreferrer" target="_blank">YouTube</a>
               </li>
               <li className="link">
-                <a href="https://t.me/KyrosDesign" rel="noopener noreferrer" target="_blank">Telegram</a><span className="arrow"><img src={arrowRight} alt=""/></span>
+                <a href="https://t.me/KyrosDesign" rel="noopener noreferrer" target="_blank">Telegram</a>
               </li>
             </ul>
             <ul className="links">
@@ -50,7 +50,7 @@ export default class Footer extends Component {
               </li>
             </ul>
           </div>
-          <p className="copyrights">Made by KyrosDesign © 2020</p>
+          <p className="copyrights">© 2020 Nome. All rights reserved. Website designed by KyrosDesign.</p>
         </div>
       </footer>
     );

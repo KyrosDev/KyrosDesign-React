@@ -81,7 +81,7 @@ export default class Contact extends Component {
 
   render() {
     return (
-        <section className="contactForm">
+        <section className="contactForm" id="contact">
             <h1 className="sectionTitle">Contact Us</h1>
             <h3 className="sectionSubtitle">Compile this form to send us an email.</h3>
             <form onSubmit={this.onSubmit} className={this.state.isSended ? "mailSended": null}>

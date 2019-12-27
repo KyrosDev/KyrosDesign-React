@@ -14,7 +14,6 @@
   transition: .3s;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   border-radius: 30px;
   background: #4552ff;
@@ -22,7 +21,6 @@
   transition: .3s;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #3841ca;
   -webkit-transition: .3s;
@@ -1039,9 +1037,12 @@ html a:active, body a:active {
 }
 
 .mailsContainer ul li .dataContainer {
+  max-width: 100%;
+  min-width: 100%;
   position: relative;
   display: block;
-  height: 320px;
+  height: auto;
+  min-height: 340px;
 }
 
 .mailsContainer ul li .username {
@@ -1170,7 +1171,7 @@ html a:active, body a:active {
   }
 }
 
-@media only screen and (min-width: 360px) and (min-height: 640px) {
+@media only screen and (min-width: 360px) {
   .homePage {
     top: 130px !important;
     width: 300px !important;
@@ -1197,6 +1198,14 @@ html a:active, body a:active {
   }
 }
 
+@media only screen and (min-width: 384px) {
+  .swipe {
+    position: relative !important;
+    display: block !important;
+    left: 53% !important;
+  }
+}
+
 @media only screen and (min-width: 480px) {
   .homePage {
     top: 160px !important;
@@ -1216,7 +1225,7 @@ html a:active, body a:active {
   .homePage .swipe {
     position: absolute !important;
     display: block !important;
-    left: 51% !important;
+    left: 52% !important;
     margin: 0 auto !important;
     bottom: 130px !important;
     -webkit-transform: translate(0, -200%) !important;
@@ -1296,7 +1305,7 @@ html a:active, body a:active {
   .homePage {
     top: 160px !important;
     width: 400px !important;
-    left: 130px !important;
+    left: 100px !important;
   }
   .homePage .title {
     font-size: 40px !important;
@@ -1312,7 +1321,7 @@ html a:active, body a:active {
   .homePage .swipe {
     position: absolute !important;
     display: block !important;
-    left: 63% !important;
+    left: 70% !important;
     margin: 0 auto !important;
     bottom: 130px !important;
     -webkit-transform: translate(0, -200%) !important;
@@ -1450,6 +1459,149 @@ html a:active, body a:active {
   }
   footer .footerLinks ul {
     margin-right: 30px !important;
+  }
+}
+
+@media only screen and (min-width: 411px) {
+  .swipe {
+    position: relative !important;
+    display: block !important;
+    left: 58% !important;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .navbar .nav-brand {
+    left: 90px !important;
+  }
+  .navbar .menu {
+    position: relative !important;
+    width: 60%;
+    opacity: 1;
+    color: #292b31;
+    top: -63px !important;
+    float: right;
+    margin-right: 100px !important;
+    text-align: center;
+    padding: 0;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    z-index: 100;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  .navbar .menu .navContainer {
+    float: right;
+    position: relative;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+  }
+  .navbar .menu .menu-item {
+    position: relative;
+    display: block;
+    margin: 10px 0;
+    width: 100px;
+    font-size: 17px;
+    padding: 10px 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  .navbar .menu .menu-item .menu-link {
+    color: #292b31;
+    text-decoration: none;
+  }
+  .homePage {
+    top: 330px !important;
+    width: 80% !important;
+  }
+  .homePage .title {
+    font-size: 60px !important;
+  }
+  .homePage .description {
+    top: -40px !important;
+    font-size: 30px !important;
+    width: 600px !important;
+  }
+  .homePage .buttonHomepage {
+    top: -40px !important;
+  }
+  .homePage .swipe {
+    position: absolute !important;
+    display: block !important;
+    left: 50% !important;
+    -webkit-transform: translate(-50%, -480%) !important;
+            transform: translate(-50%, -480%) !important;
+  }
+  .workflow {
+    width: 100% !important;
+  }
+  .workflow .workFlowContainer {
+    width: 90% !important;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+  .workflow .workFlowContainer ul {
+    position: relative !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100% !important;
+    margin-top: 30px;
+  }
+  .workflow .workFlowContainer ul li {
+    width: 350px !important;
+    margin: 20px 30px;
+    height: 430px !important;
+  }
+  .services {
+    overflow: hidden;
+  }
+  .services ul {
+    position: relative !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    left: 50%;
+    -webkit-transform: translate(-32%, 0) !important;
+            transform: translate(-32%, 0) !important;
+  }
+  .services ul li {
+    width: 280px !important;
+    margin-right: 30px;
+    min-height: 200px;
+    margin-left: 0;
+  }
+  .resources ul {
+    margin-top: 40px !important;
+  }
+  .resources ul li {
+    width: 330px !important;
+  }
+  .contactForm {
+    width: 600px !important;
+  }
+  .authorContainer ul .logoContainer {
+    width: 100px !important;
+  }
+  .authorContainer ul li span {
+    top: 10px !important;
+    font-size: 30px !important;
   }
 }
 /*# sourceMappingURL=App.css.map */

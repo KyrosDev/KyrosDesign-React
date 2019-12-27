@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import conversation from "./img/workflow/conversation.svg"
-import drafts from "./img/workflow/sketch.svg"
-import value from "./img/workflow/value.svg"
+import conversation from "./img/conversation.svg"
+import drafts from "./img/sketch.svg"
+import value from "./img/value.svg"
 
 export default class Workflow extends Component {
   render() {

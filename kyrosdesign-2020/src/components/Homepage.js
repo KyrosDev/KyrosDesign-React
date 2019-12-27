@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import Footer from "./Footer";
-import Workflow from './containers/Workflow';
-import Services from './containers/Services';
-import Sources from './containers/Sources';
-import Contact from './containers/Contact';
+import Workflow from './Workflow';
+import Services from './Services';
+import Contact from './Contact';
 
 export default class Homepage extends Component {
   render() {
@@ -15,7 +14,7 @@ export default class Homepage extends Component {
           <p className="description">Do like me, build your future, create your style and start your career.</p>
           <a href="#contact" className="buttonBackground buttonHomepage">Contact</a>
           <img className="backgroundImage" src="" alt=""/>
-          <a href="#workflow" className="swipe">
+          <a href="/#workflow" className="swipe">
             <span className="ver"/>
             <span className="arr" />
             <span className="arr" />
@@ -23,7 +22,6 @@ export default class Homepage extends Component {
         </div>
         <Workflow />
         <Services />
-        <Sources />
         <Contact />
         <Footer />
       </div>

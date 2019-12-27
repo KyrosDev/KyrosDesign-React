@@ -16,8 +16,9 @@ function App() {
       <Switch>
         <Route exact path="/" component={Homepage} />
         <Route path="/portfolio" component={Gallery} />
+        <Route path="/terms" component={Gallery} />
         <Route path="/image" component={Details}/>
-        <Route path="/products/create" component={createProduct}/>
+        <Route path="/admin/products/create" component={createProduct}/>
         <Route path="/admin/emails" component={admMails}/>
         <Route component={Default} />
       </Switch>

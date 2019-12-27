@@ -14,7 +14,7 @@ export default class Navbar extends Component {
         handleClick() {
           this.setState({
             hasClass: !this.state.hasClass
-        })
+        });
     }
 
   render() {
@@ -23,11 +23,11 @@ export default class Navbar extends Component {
             <Link to="/" className="nav-brand">
                 <img src={logo} className="brand-img" alt="kyrosdesign" /><span>KyrosDesign</span>
             </Link>
-            <div className={this.state.hasClass ? 'menuListener opened' : 'menuListener closed'} onClick={this.handleClick}>
+            {window.innerWidth < 1024?<div className={this.state.hasClass ? 'menuListener opened' : 'menuListener closed'} onClick={this.handleClick}>
                 <span />
                 <span />
-            </div>
-            <ul className={this.state.hasClass ? 'menu opened' : 'menu closed'}>
+            </div>: null}
+            <ul className={window.innerWidth < 1024?this.state.hasClass ? 'menu opened' : 'menu closed': "menu"}>
                 <div className="navContainer">
                     <li className="menu-item">
                         <Link to="/" className="menu-link">Home</Link>
@@ -37,9 +37,6 @@ export default class Navbar extends Component {
                     </li>
                     <li className="menu-item">
                         <Link to="/portfolio" className="menu-link">Portfolio</Link>
-                    </li>
-                    <li className="menu-item">
-                        <Link to="/#resources" className="menu-link">Resources</Link>
                     </li>
                     <li className="menu-item">
                         <Link to="/#contact" className="menu-link">Contact</Link>
