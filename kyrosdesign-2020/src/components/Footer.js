@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
-import arrowRight from './img/right-arrow (1).svg'
 import logo from "./img/logoBlack.png";
 
 export default class Footer extends Component {
@@ -14,7 +13,7 @@ export default class Footer extends Component {
                 <img src={logo} ref="Drafts" alt=""/>
               </li>
               <li>
-                <span className="author">KyrosDesign</span>
+                <span className="author">Nome</span>
               </li>
             </ul>
           </div>
@@ -40,13 +39,13 @@ export default class Footer extends Component {
             <ul className="links">
               <h1 className="listTitle">Support</h1>
               <li className="link">
-                <Link to="/">Legal Terms</Link>
+                <Link to="/terms">Legal Terms</Link>
               </li>
               <li className="link">
-                <Link to="/">Privacy Policy</Link>
+                <Link to="/privacy">Privacy Policy</Link>
               </li>
               <li className="link">
-                <Link to="/">Cookie Policy</Link>
+                <Link to="/cookies">Cookie Policy</Link>
               </li>
             </ul>
           </div>

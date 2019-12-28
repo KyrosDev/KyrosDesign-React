@@ -1666,17 +1666,17 @@ html a:active, body a:active {
 
 @media only screen and (min-width: 1440px) {
   .navbar .nav-brand {
-    left: 160px !important;
+    left: 340px !important;
   }
   .navbar .menu {
-    right: 160px !important;
+    right: 340px !important;
   }
   .homePage {
     top: 180px !important;
-    left: 180px !important;
+    left: 360px !important;
   }
   .homePage .swipe {
-    left: 53% !important;
+    left: 44.5% !important;
     -webkit-transform: translate(-50%, -210%) !important;
             transform: translate(-50%, -210%) !important;
   }
@@ -1728,6 +1728,16 @@ html a:active, body a:active {
   }
   .services ul {
     left: 45.5% !important;
+  }
+  footer .footerContainer .authorContainer {
+    left: 740px !important;
+  }
+  footer .footerContainer .authorContainer ul li span {
+    font-size: 30px !important;
+    top: 10px !important;
+  }
+  footer .footerContainer .footerLinks {
+    left: 1140px !important;
   }
 }
 /*# sourceMappingURL=App.css.map */

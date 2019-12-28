@@ -1787,20 +1787,20 @@ html, body{
 
     .navbar{
         .nav-brand{
-            left: 160px !important;
+            left: 340px !important;
         }
 
         .menu{
-            right: 160px !important;
+            right: 340px !important;
         }
     }
 
     .homePage{
         top: 180px !important;
-        left: 180px !important;
+        left: 360px !important;
 
         .swipe{
-            left: 53% !important;
+            left: 44.5% !important;
             transform: translate(-50%, -210%) !important;
 
         }
@@ -1857,6 +1857,8 @@ html, body{
 
 }
 
+//2200px
+
 @media only screen and (min-width: 2200px) {
 
     .homePage{
@@ -1893,5 +1895,35 @@ html, body{
         ul{
             left: 45.5% !important;
         }
+    }
+
+    footer{
+
+        .footerContainer{
+
+            .authorContainer{
+                left: 740px !important;
+
+                ul{
+
+                    li{
+
+                        span{
+                            font-size: 30px !important;
+                            top: 10px !important;
+                        }
+
+                    }
+
+                }
+
+            }
+
+            .footerLinks{
+                left: 1140px !important;
+            }
+
+        }
+
     }
 }
