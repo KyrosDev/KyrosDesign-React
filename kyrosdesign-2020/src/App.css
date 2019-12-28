@@ -1301,6 +1301,20 @@ html a:active, body a:active {
   }
 }
 
+@media only screen and (min-width: 411px) {
+  .swipe {
+    position: relative !important;
+    display: block !important;
+    left: 58% !important;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .homePage .swipe {
+    left: 66% !important;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .homePage {
     top: 160px !important;
@@ -1462,11 +1476,9 @@ html a:active, body a:active {
   }
 }
 
-@media only screen and (min-width: 411px) {
-  .swipe {
-    position: relative !important;
-    display: block !important;
-    left: 58% !important;
+@media only screen and (min-width: 800px) {
+  .homePage .swipe {
+    left: 74% !important;
   }
 }
 
@@ -1520,6 +1532,11 @@ html a:active, body a:active {
   .navbar .menu .menu-item .menu-link {
     color: #292b31;
     text-decoration: none;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  .navbar .menu li:hover .menu-link {
+    color: #4552ff !important;
   }
   .homePage {
     top: 330px !important;
@@ -1539,7 +1556,8 @@ html a:active, body a:active {
   .homePage .swipe {
     position: absolute !important;
     display: block !important;
-    left: 50% !important;
+    left: 50.5% !important;
+    margin: 0px auto !important;
     -webkit-transform: translate(-50%, -480%) !important;
             transform: translate(-50%, -480%) !important;
   }
@@ -1560,6 +1578,9 @@ html a:active, body a:active {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     width: 100% !important;
+    left: 50% !important;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
     margin-top: 30px;
   }
   .workflow .workFlowContainer ul li {
@@ -1602,6 +1623,111 @@ html a:active, body a:active {
   .authorContainer ul li span {
     top: 10px !important;
     font-size: 30px !important;
+  }
+}
+
+@media only screen and (min-width: 1057px) {
+  .services ul {
+    width: 700px !important;
+    left: 40% !important;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .homePage {
+    top: 140px !important;
+  }
+  .homePage .swipe {
+    left: 52% !important;
+    -webkit-transform: translate(-50%, -140%) !important;
+            transform: translate(-50%, -140%) !important;
+  }
+  .sectionSubtitle {
+    width: 400px !important;
+  }
+  .workflow .workFlowContainer {
+    width: 800px !important;
+    left: 35% !important;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+  .workflow .workFlowContainer ul li {
+    width: 300px !important;
+  }
+  .services ul {
+    width: 700px !important;
+    left: 42% !important;
+  }
+  .footerContainer .authorContainer {
+    top: 110px !important;
+    left: 16% !important;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .navbar .nav-brand {
+    left: 160px !important;
+  }
+  .navbar .menu {
+    right: 160px !important;
+  }
+  .homePage {
+    top: 180px !important;
+    left: 180px !important;
+  }
+  .homePage .swipe {
+    left: 53% !important;
+    -webkit-transform: translate(-50%, -210%) !important;
+            transform: translate(-50%, -210%) !important;
+  }
+  .sectionSubtitle {
+    width: 400px !important;
+  }
+  .workflow .workFlowContainer {
+    left: 30% !important;
+  }
+  .services ul {
+    width: 700px;
+    left: 42.5% !important;
+  }
+  .authorContainer ul {
+    top: -20px !important;
+  }
+  .authorContainer ul .logoContainer {
+    width: 100px !important;
+  }
+  .authorContainer ul .author {
+    font-size: 40px !important;
+    top: 0px !important;
+  }
+  .footerLinks ul {
+    left: 10% !important;
+  }
+}
+
+@media only screen and (min-width: 2200px) {
+  .homePage {
+    top: 350px !important;
+  }
+  .homePage .swipe {
+    -webkit-transform: translate(-50%, -500%) !important;
+            transform: translate(-50%, -500%) !important;
+  }
+  .workflow {
+    overflow: hidden;
+  }
+  .workflow .workFlowContainer {
+    width: 100% !important;
+    left: 79% !important;
+    -webkit-transform: translate(-50%, 0) !important;
+            transform: translate(-50%, 0) !important;
+  }
+  .workflow .workFlowContainer ul {
+    width: 100% !important;
+    left: 50% !important;
+  }
+  .services ul {
+    left: 45.5% !important;
   }
 }
 /*# sourceMappingURL=App.css.map */

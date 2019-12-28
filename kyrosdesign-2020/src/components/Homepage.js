@@ -14,16 +14,16 @@ export default class Homepage extends Component {
           <p className="description">Do like me, build your future, create your style and start your career.</p>
           <a href="#contact" className="buttonBackground buttonHomepage">Contact</a>
           <img className="backgroundImage" src="" alt=""/>
-          <a href="/#workflow" className="swipe">
-            <span className="ver"/>
-            <span className="arr" />
-            <span className="arr" />
-          </a>
+        <a href="/#workflow" className="swipe">
+          <span className="ver"/>
+          <span className="arr" />
+          <span className="arr" />
+        </a>
         </div>
         <Workflow />
         <Services />
-        <Contact />
-        <Footer />
+        <Contact  />
+        <Footer   />
       </div>
     );
   }

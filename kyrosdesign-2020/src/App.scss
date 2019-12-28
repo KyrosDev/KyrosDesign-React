@@ -1159,6 +1159,8 @@ html, body{
     }
 }
 
+//Nexus 4 & LG Optimus L70
+
 @media only screen and (min-width: 384px) {
     .swipe{
         position: relative !important;
@@ -1166,6 +1168,8 @@ html, body{
         left: 53% !important;
     }
 }
+
+//Nokia N9
 
 @media only screen and (min-width: 480px) {
     .homePage{
@@ -1283,6 +1287,30 @@ html, body{
             margin: 0 auto !important;
         }
 }
+
+//Pixel2 & Pixel2 XL
+
+@media only screen and (min-width: 411px) {
+    .swipe{
+        position: relative !important;
+        display: block !important;
+        left: 58% !important;
+    }
+}
+
+//Nexus 7 & Blackberry PlayBook
+
+@media only screen and (min-width: 600px) {
+
+    .homePage{
+        .swipe{
+            left: 66% !important; 
+        }
+    }
+
+}
+
+//iPad Mini
 
 @media only screen and (min-width: 768px) {
     .homePage{
@@ -1479,13 +1507,19 @@ html, body{
 
 }
 
-@media only screen and (min-width: 411px) {
-    .swipe{
-        position: relative !important;
-        display: block !important;
-        left: 58% !important;
+//Kindle Fire HDX
+
+@media only screen and (min-width: 800px) {
+    .homePage{
+
+        .swipe{
+            left: 74% !important;
+        }
+    
     }
 }
+
+//iPad Pro
 
 @media only screen and (min-width: 1024px) {
 
@@ -1532,9 +1566,15 @@ html, body{
                 .menu-link{
                     color: $titleColor;
                     text-decoration: none;
+                    transition: .3s;
                 }
-    
+
+                
             }
+            li:hover .menu-link{
+                color: $mainColor !important;
+            }
+
         }
 
 
@@ -1562,7 +1602,8 @@ html, body{
         .swipe{
             position: absolute !important;
             display: block !important;
-            left: 50% !important;
+            left: 50.5% !important;
+            margin: 0px auto !important;
             transform: translate(-50%, -480%) !important;
         }
 
@@ -1583,12 +1624,15 @@ html, body{
                 display: flex;
                 flex-wrap: wrap;
                 width: 100% !important;
+                left: 50% !important;
+                transform: translate(-50%, 0);
                 margin-top: 30px;
 
                 li{
                     width: 350px !important;
                     margin: 20px 30px;
                     height: 430px !important;
+                    
                 }
 
             }
@@ -1660,4 +1704,194 @@ html, body{
 
     }
 
+}
+
+//1057px
+
+@media only screen and (min-width: 1057px) {
+
+    .services{
+
+        ul{
+            width: 700px !important;
+            left: 40% !important;
+        }
+
+    }
+
+}
+
+//Laptop with MDPI screen & Laptop with Touch
+
+@media only screen and (min-width: 1280px) {
+
+    .homePage{
+
+        top: 140px !important;
+
+        .swipe{
+            left: 52% !important;
+            transform: translate(-50%, -140%) !important;
+        }
+
+    }
+
+    .sectionSubtitle{
+        width: 400px !important;
+    }
+
+    .workflow{
+
+        .workFlowContainer{
+            width: 800px !important;
+            left: 35% !important;
+            transform: translate(-50%, 0);
+
+            ul{
+
+                li{
+                    width: 300px !important;
+                }
+
+            }
+
+        }
+
+    }
+
+    .services{
+
+        ul{
+            width: 700px !important;
+            left: 42% !important;
+        }
+        
+    }
+
+    .footerContainer{
+
+        .authorContainer{
+
+            top: 110px !important;
+            left: 16% !important;
+
+        }
+
+    }
+
+}
+
+//Laptop with HiDPI screen
+
+@media only screen and (min-width: 1440px) {
+
+    .navbar{
+        .nav-brand{
+            left: 160px !important;
+        }
+
+        .menu{
+            right: 160px !important;
+        }
+    }
+
+    .homePage{
+        top: 180px !important;
+        left: 180px !important;
+
+        .swipe{
+            left: 53% !important;
+            transform: translate(-50%, -210%) !important;
+
+        }
+
+    }
+
+    .sectionSubtitle{
+        width: 400px !important;
+    }
+
+    .workflow{
+
+        .workFlowContainer{
+
+            left: 30% !important;
+
+        }
+
+    }
+
+    .services{
+
+        ul{
+            width: 700px;
+            left: 42.5% !important;
+        }
+
+    }
+
+    .authorContainer{
+
+        ul{
+            top: -20px !important;
+
+            .logoContainer{
+                width: 100px !important;
+            }
+
+            .author{
+
+                font-size: 40px !important;
+                top: 0px !important;
+
+            }
+        }
+
+    }
+
+    .footerLinks{
+        ul{
+            left: 10% !important;
+        }
+    }
+
+}
+
+@media only screen and (min-width: 2200px) {
+
+    .homePage{
+
+        top: 350px !important;
+
+        .swipe{
+
+            transform: translate(-50%, -500%) !important;
+
+        }
+
+    }
+
+    .workflow{
+
+        overflow: hidden;
+
+        .workFlowContainer{
+            width: 100% !important;
+            left: 79% !important;
+            transform: translate(-50%, 0) !important;
+
+            ul{
+                width: 100% !important;
+                left: 50% !important;
+            }
+
+        }
+
+    }
+
+    .services{
+        ul{
+            left: 45.5% !important;
+        }
+    }
 }
