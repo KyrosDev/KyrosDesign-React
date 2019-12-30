@@ -9,17 +9,17 @@ export default class Homepage extends Component {
     return (
       <div className="container">
         <div className="homePage">
-          <h3 className="studyTitle titles">Web Developer and Designer</h3>
-          <h1 className="title titles">KyrosDesign</h1>
+          {/*h3 className="studyTitle titles">Web Developer and Designer</h3>*/}
+          <h1 className="title titles"><span className="coloredText">Media</span> Design</h1>
           <p className="description">Do like me, build your future, create your style and start your career.</p>
           <a href="#contact" className="buttonBackground buttonHomepage">Contact</a>
-          <img className="backgroundImage" src="" alt=""/>
-        <a href="/#workflow" className="swipe">
+        {window.innerWidth < 1440?<a href="/#workflow" className="swipe">
           <span className="ver"/>
           <span className="arr" />
           <span className="arr" />
-        </a>
+        </a>: null}
         </div>
+        {window.innerWidth >= 1440?<canvas className="canvas" />: null}
         <Workflow />
         <Services />
         <Contact  />

@@ -80,7 +80,7 @@ $(document).ready(function(){
     });
   });
 
-  $(document).ready(function(){
+$(document).ready(function(){
     // Add smooth scrolling to all links
     $(".swipe").on('click', function(event) {
 
@@ -103,9 +103,9 @@ $(document).ready(function(){
         });
       } // End if
     });
-  });
+});
 
-  $(document).ready(function(){
+$(document).ready(function(){
     // Add smooth scrolling to all links
     $(".buttonHomepage").on('click', function(event) {
 
@@ -128,4 +128,4 @@ $(document).ready(function(){
         });
       } // End if
     });
-  });
+});

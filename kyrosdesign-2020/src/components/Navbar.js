@@ -21,7 +21,7 @@ export default class Navbar extends Component {
     return (
         <nav className="navbar">
             <Link to="/" className="nav-brand">
-                <img src={logo} className="brand-img" alt="kyrosdesign" /><span>KyrosDesign</span>
+                <img src={logo} className="brand-img" alt="kyrosdesign" /><span>MediaDesign</span>
             </Link>
             {window.innerWidth < 1024?<div className={this.state.hasClass ? 'menuListener opened' : 'menuListener closed'} onClick={this.handleClick}>
                 <span />

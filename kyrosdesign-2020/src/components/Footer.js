@@ -13,7 +13,7 @@ export default class Footer extends Component {
                 <img src={logo} ref="Drafts" alt=""/>
               </li>
               <li>
-                <span className="author">Nome</span>
+                <span className="author">MDesign</span>
               </li>
             </ul>
           </div>
@@ -49,7 +49,7 @@ export default class Footer extends Component {
               </li>
             </ul>
           </div>
-          <p className="copyrights">© 2020 Nome. All rights reserved. Website designed by KyrosDesign.</p>
+          <p className="copyrights">© 2020 Media Design. All rights reserved. Website designed by KyrosDesign.</p>
         </div>
       </footer>
     );
