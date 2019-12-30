@@ -3,6 +3,7 @@ import Footer from "./Footer";
 import Workflow from './Workflow';
 import Services from './Services';
 import Contact from './Contact';
+import Collaborations from './Collaborations';
 
 export default class Homepage extends Component {
 
@@ -30,10 +31,11 @@ export default class Homepage extends Component {
           <span className="arr" />
           </a>: null}
         </div>
-        <Workflow />
-        <Services />
-        <Contact  />
-        <Footer   />
+        <Workflow       />
+        <Services       />
+        <Collaborations />
+        <Contact        />
+        <Footer         />
       </div>
     );
   }

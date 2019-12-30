@@ -53,6 +53,9 @@ export default class Footer extends Component {
               <li className="link">
                 <a href="https://fiveshoots.tech/">FiveShoot</a>
               </li>
+              <li className="link">
+                <a href="https://wallpapersrgb/">RGBWallpapers</a>
+              </li>
             </ul>
           </div>
           <p className="copyrights">© 2020 Media Design. All rights reserved. Website designed by KyrosDesign.</p>
