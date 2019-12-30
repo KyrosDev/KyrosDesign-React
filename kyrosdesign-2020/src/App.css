@@ -521,46 +521,9 @@ html a:active, body a:active {
   transition: .3s;
 }
 
-.container .footerContainer .otherLinks .link:hover .arrow {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-animation: linkArrow .3s ease;
-          animation: linkArrow .3s ease;
-}
-
 .container .footerContainer ul .link:hover a {
   color: #383838;
   text-decoration: underline;
-}
-
-@-webkit-keyframes linkArrow {
-  0% {
-    opacity: 0;
-    display: none;
-    left: 0px;
-  }
-  100% {
-    display: -webkit-inline-box;
-    display: inline-flex;
-    opacity: 1;
-    left: 10px;
-  }
-}
-
-@keyframes linkArrow {
-  0% {
-    opacity: 0;
-    display: none;
-    left: 0px;
-  }
-  100% {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    opacity: 1;
-    left: 10px;
-  }
 }
 
 .container .footerContainer .authorContainer {
@@ -590,10 +553,10 @@ html a:active, body a:active {
 }
 
 .container .footerContainer .authorContainer ul img {
-  width: 40%;
+  width: 80%;
   position: relative;
   opacity: .8;
-  top: -5px;
+  top: 7px;
 }
 
 .container .footerContainer .authorContainer ul span {
@@ -651,6 +614,30 @@ html a:active, body a:active {
 }
 
 .container .footerContainer .otherLinks .link {
+  position: relative;
+  display: block;
+  width: 100px;
+  font-size: 15px;
+}
+
+.container .footerContainer .collaborationsLinks {
+  list-style: none;
+  position: relative;
+  display: block;
+  left: 0;
+  width: 120px;
+  padding: 0;
+  top: -20px;
+}
+
+.container .footerContainer .collaborationsLinks h1 {
+  font-size: 20px;
+  position: relative;
+  display: block;
+  top: 10px;
+}
+
+.container .footerContainer .collaborationsLinks .link {
   position: relative;
   display: block;
   width: 100px;
@@ -1671,20 +1658,11 @@ html a:active, body a:active {
             transform: translate(-50%, -140%) !important;
   }
   .homePage .buttonHomepage {
-    -webkit-transition: .2s !important;
-    transition: .2s !important;
+    -webkit-transition: .3s !important;
+    transition: .3s !important;
   }
   .homePage .buttonHomepage:hover {
     top: -45px !important;
-  }
-  .canvas {
-    position: absolute;
-    display: block;
-    top: -10px;
-    z-index: 2;
-    left: 0;
-    margin: 0;
-    padding: 0;
   }
   .sectionSubtitle {
     width: 400px !important;
@@ -1712,8 +1690,8 @@ html a:active, body a:active {
     left: 42% !important;
   }
   .services ul li {
-    -webkit-transition: .2s !important;
-    transition: .2s !important;
+    -webkit-transition: .3s !important;
+    transition: .3s !important;
   }
   .services ul li:hover {
     -webkit-transform: translate(0, -20px) !important;

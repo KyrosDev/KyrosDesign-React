@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
-import logo from "./img/logoBlack.png";
+import logo from "./img/logo.svg";
 
 export default class Footer extends Component {
   render() {
@@ -13,7 +13,7 @@ export default class Footer extends Component {
                 <img src={logo} ref="Drafts" alt=""/>
               </li>
               <li>
-                <span className="author">MDesign</span>
+                <span className="author">MediaDesign</span>
               </li>
             </ul>
           </div>
@@ -46,6 +46,12 @@ export default class Footer extends Component {
               </li>
               <li className="link">
                 <Link to="/cookies">Cookie Policy</Link>
+              </li>
+            </ul>
+            <ul className="collaborationsLinks">
+              <h1 className="listTitle">Collaborations</h1>
+              <li className="link">
+                <a href="https://fiveshoots.tech/">FiveShoot</a>
               </li>
             </ul>
           </div>
