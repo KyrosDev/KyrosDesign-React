@@ -21,19 +21,16 @@ export default class Footer extends Component {
             <ul className="otherLinks">
               <h1 className="listTitle">Socials</h1>
               <li className="link">
-                <a href="https://www.instagram.com/__v.alecs__" rel="noopener noreferrer" target="_blank">Instagram</a>
+                <a href="https://www.instagram.com/mdesign.studios" rel="noopener noreferrer" target="_blank">Instagram</a>
               </li>
               <li className="link">
-                <a href="https://www.github.com/KyrosDev" rel="noopener noreferrer" target="_blank">GitHub</a>
+                <a href="https://www.github.com/MediaDesignStudios" rel="noopener noreferrer" target="_blank">GitHub</a>
               </li>
               <li className="link">
-                <a href="https://www.twitter.com/KyrosDes" rel="noopener noreferrer" target="_blank">Twitter</a>
+                <a href="https://www.twitter.com/MediaDesignSTD" rel="noopener noreferrer" target="_blank">Twitter</a>
               </li>
               <li className="link">
                 <a href="/" rel="noopener noreferrer" target="_blank">YouTube</a>
-              </li>
-              <li className="link">
-                <a href="https://t.me/KyrosDesign" rel="noopener noreferrer" target="_blank">Telegram</a>
               </li>
             </ul>
             <ul className="links">
@@ -51,14 +48,15 @@ export default class Footer extends Component {
             <ul className="collaborationsLinks">
               <h1 className="listTitle">Collaborations</h1>
               <li className="link">
-                <a href="https://fiveshoots.tech/">FiveShoot</a>
+                <a href="https://fiveshots.tech/" rel="noopener noreferrer" target="_blank">FiveShots</a>
               </li>
               <li className="link">
-                <a href="https://wallpapersrgb/">RGBWallpapers</a>
+                <a href="https://wallpapersrgb.com/" rel="noopener noreferrer" target="_blank">RGBWallpapers</a>
               </li>
             </ul>
           </div>
-          <p className="copyrights">© 2020 Media Design. All rights reserved. Website designed by KyrosDesign.</p>
+          <p className="copyrights">© 2020 Media Design. All rights reserved. Website designed by <a  href="https://www.instagram.com/__v.alecs__" rel="noopener noreferrer" target="_blank">KyrosDesign</a>.</p>
+          <p className="copyrights">For more info send an email at: mediadesign.business@gmail.com</p>
         </div>
       </footer>
     );

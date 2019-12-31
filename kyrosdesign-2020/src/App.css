@@ -395,38 +395,6 @@ html a:active, body a:active {
   margin: 0 auto;
 }
 
-.container .collaborations {
-  width: 100%;
-  height: auto;
-}
-
-.container .collaborations ul {
-  list-style: none;
-  padding: 0;
-}
-
-.container .collaborations ul li {
-  position: relative;
-  display: block;
-  width: 200px;
-  height: 200px;
-  margin: 20px auto;
-  text-align: center;
-  padding: 0;
-  opacity: .7;
-}
-
-.container .collaborations ul li img {
-  -webkit-filter: invert(1);
-          filter: invert(1);
-}
-
-.container .collaborations ul li span {
-  color: #292b31;
-  font-size: 20px;
-  font-weight: bolder;
-}
-
 .container form {
   position: relative;
   display: block;
@@ -1761,6 +1729,10 @@ html a:active, body a:active {
     -webkit-transform: translate(-50%, -210%) !important;
             transform: translate(-50%, -210%) !important;
   }
+  .homePage .buttonHomepage {
+    width: 200px;
+    border-radius: 20px 0 20px 0;
+  }
   .sectionSubtitle {
     width: 400px !important;
   }
@@ -1770,6 +1742,9 @@ html a:active, body a:active {
   .services ul {
     width: 700px;
     left: 42.5% !important;
+  }
+  .services ul .moreButton {
+    border-radius: 10px 0 10px 0;
   }
   .services ul li:nth-child(5) .moreButton {
     top: 20px !important;

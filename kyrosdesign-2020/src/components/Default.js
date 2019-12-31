@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
 
 export default class Default extends Component {
+
+  componentDidMount(){
+    document.title += " | Whoops..."
+  }
+
   render() {
     return (
-    <div>
-        <h1>Page not found :C</h1>
-    </div>
+    <section>
+        <h1>404</h1>
+        <h1 className="sectionTitle">Whoops, page not founded.</h1>
+        <a href="/">Homepage</a>
+    </section>
     );
   }
 }

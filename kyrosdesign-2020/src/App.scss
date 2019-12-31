@@ -409,42 +409,6 @@ html, body{
 
     }
 
-    .collaborations{
-        
-        width: 100%;
-        height: auto;
-
-        ul{
-            list-style: none;
-            padding: 0;
-
-            li{
-
-                position: relative;
-                display: block;
-                width: 200px;
-                height: 200px;
-                margin: 20px auto;
-                text-align: center;
-                padding: 0;
-                opacity: .7;
-                
-                img{
-                    filter: invert(1);
-                }
-
-                span{
-                    color: $titleColor;
-                    font-size: 20px;
-                    font-weight: bolder;
-                }
-
-            }
-
-        }
-
-    }
-
     form{
 
         position: relative;
@@ -1973,6 +1937,11 @@ html, body{
 
         }
 
+        .buttonHomepage{
+            width: 200px;
+            border-radius: 20px 0 20px 0;
+        }
+
     }
 
     .sectionSubtitle{
@@ -1994,6 +1963,10 @@ html, body{
         ul{
             width: 700px;
             left: 42.5% !important;
+
+            .moreButton{
+                border-radius: 10px 0 10px 0;
+            }
 
             li:nth-child(5){
 
