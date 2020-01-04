@@ -41,7 +41,7 @@ for (const [index, value] of services.entries()) {
     <li className="service" key={index}>
       <h1 className="serviceTitle">{value.name}</h1>
       <p className="serviceDescription">{value.description}</p>
-      <Link to="/services" className="button moreButton">Learn more</Link>
+      {value.name !== "WebHosting" ? <Link to="/services" className="button moreButton">Learn more</Link> : <a href="https://fiveshot.tech/" className="button moreButton">Learn more</a>}
     </li>
   );
 }
