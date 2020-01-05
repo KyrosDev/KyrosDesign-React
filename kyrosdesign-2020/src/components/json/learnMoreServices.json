@@ -1,0 +1,44 @@
+[
+    {
+        "title": "Design",
+        "description": "",
+        "types": [
+            {
+                "type": "Mobile App Designs"
+            },
+            {
+                "type": "Website Designs"
+            },
+            {
+                "type": "UI/UX Enhancements"
+            },
+            {
+                "type": "Interaction Designs"
+            },
+            {
+                "type": "Graphic Designs"
+            }
+        ]
+    },
+    {
+        "title": "Motion",
+        "description": "Descrizione 2",
+        "types": [
+            {
+                "type": "Motion Graphics"
+            },
+            {
+                "type": "2D Animations"
+            },
+            {
+                "type": "Promo Videos"
+            },
+            {
+                "type": "3D Animations"
+            },
+            {
+                "type": "Professional Video Effects"
+            }
+        ]
+    }
+]

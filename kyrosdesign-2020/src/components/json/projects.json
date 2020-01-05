@@ -1,0 +1,17 @@
+[
+    {
+      "type": "video",
+      "title": "Styders Promo/Presentation",
+      "typography": "Motion Design, Promo"
+    },
+    {
+      "type": "image",
+      "title": "MediaDesign WebSite",
+      "typography": "WebDevelopment, UI Design, UX Design"
+    },
+    {
+      "type": "image",
+      "title": "MorningCaffe WebSite",
+      "typography": "WebDevelopment, UI Design"
+    }
+]

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export default class Default extends Component {
 
@@ -8,11 +9,11 @@ export default class Default extends Component {
 
   render() {
     return (
-    <section>
-        <h1>404</h1>
-        <h1 className="sectionTitle">Whoops, page not founded.</h1>
-        <a href="/">Homepage</a>
-    </section>
+    <div className="nf">
+        <h1 className="pageTitle">Whoops...</h1>
+        <h3 className="pageSubtitle">It appears that this page does not exist.</h3>
+        <Link to="/" className="button">Home</Link>
+    </div>
     );
   }
 }

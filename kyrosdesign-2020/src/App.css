@@ -74,6 +74,113 @@ html a:active, body a:active {
   outline: none;
 }
 
+.nf {
+  display: block;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.nf h1 {
+  color: #292b31;
+}
+
+.nf h3 {
+  margin: 1em auto;
+  width: 14em;
+  color: #4b4b4b;
+  font-weight: 400;
+}
+
+.nf .button {
+  width: 10em;
+  border-radius: 1em .3em 1em .3em;
+  margin: 0 auto;
+  color: white;
+  background: #4552ff;
+  text-decoration: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+}
+
+.page .pageTitle {
+  font-size: 2rem;
+  width: 10em;
+  text-align: center;
+  font-weight: 600;
+  margin: 2em auto;
+}
+
+.page .serviceList {
+  width: 100%;
+  height: auto;
+  list-style: none;
+  padding: 0;
+}
+
+.page .serviceList li.service {
+  position: relative;
+  display: block;
+  margin-bottom: 3em;
+  -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.05);
+  padding: 2em;
+  padding-bottom: 3em;
+  overflow: hidden;
+}
+
+.page .serviceList li.service .imageContainer {
+  background: red;
+  margin-left: -2em;
+  width: calc(100% + 4em);
+  height: 13em;
+  margin-top: -2em;
+}
+
+.page .serviceList li.service .imageContainer img {
+  width: 100%;
+}
+
+.page .serviceList li.service .serviceTitle {
+  font-size: 2.3rem;
+}
+
+.page .serviceList li.service .serviceDescription {
+  font-size: .9rem;
+  color: #4b4b4b;
+  line-height: 1.7rem;
+}
+
+.page .serviceList li.service ul {
+  padding: 0;
+  list-style-type: disc;
+  margin-left: 2em;
+}
+
+.page .serviceList li.service ul li {
+  font-size: 1.3em;
+  padding: .2em;
+  margin: .3em 0;
+  font-weight: 500;
+  color: #4b4b4b;
+}
+
+.page .serviceList li.service:nth-child(1) {
+  border-radius: 0 5em 0 0;
+}
+
+.page .serviceList li.service:nth-child(2) {
+  border-radius: 0 0 5em 0;
+}
+
 .workFlowContainer {
   position: relative;
   display: block;
@@ -330,6 +437,164 @@ html a:active, body a:active {
   color: white;
 }
 
+footer {
+  width: 100%;
+  height: auto;
+  background: #ffffff;
+  border-top: 1px solid #bbbbbb;
+  color: #5c5c5c;
+}
+
+.footerContainer {
+  position: relative;
+  display: block;
+  padding: 20px 30px;
+}
+
+.footerContainer .arrow {
+  width: 15px;
+  position: relative;
+  display: none;
+  left: 10px;
+  top: 2px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.footerContainer .arrow img {
+  width: 100%;
+}
+
+.footerContainer a {
+  color: #5c5c5c !important;
+  text-decoration: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.footerContainer ul .link:hover a {
+  color: #383838;
+  text-decoration: underline;
+}
+
+.footerContainer .authorContainer {
+  position: relative;
+  display: block;
+  height: 60px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.footerContainer .authorContainer ul {
+  text-align: center;
+  padding-left: 0;
+  list-style: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  margin: 10px 0;
+}
+
+.footerContainer .authorContainer ul .logoContainer {
+  width: 60px;
+  height: 60px;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.footerContainer .authorContainer ul img {
+  width: 80%;
+  position: relative;
+  opacity: .8;
+  top: 7px;
+}
+
+.footerContainer .authorContainer ul span {
+  position: relative;
+  display: block;
+  top: 4px;
+  font-size: 20px;
+}
+
+.footerContainer .links {
+  list-style: none;
+  position: relative;
+  display: block;
+  left: 0;
+  width: 120px;
+  padding: 0;
+  top: -20px;
+}
+
+.footerContainer .links h1 {
+  font-size: 20px;
+  position: relative;
+  display: block;
+  top: 10px;
+}
+
+.footerContainer .links .link {
+  position: relative;
+  display: block;
+  font-size: 15px;
+}
+
+.footerContainer .copyrights {
+  position: relative;
+  display: block;
+  font-size: 14px;
+  text-align: center;
+}
+
+.footerContainer .otherLinks {
+  list-style: none;
+  position: relative;
+  display: block;
+  left: 0;
+  width: 120px;
+  padding: 0;
+  top: -20px;
+}
+
+.footerContainer .otherLinks h1 {
+  font-size: 20px;
+  position: relative;
+  display: block;
+  top: 10px;
+}
+
+.footerContainer .otherLinks .link {
+  position: relative;
+  display: block;
+  width: 100px;
+  font-size: 15px;
+}
+
+.footerContainer .collaborationsLinks {
+  list-style: none;
+  position: relative;
+  display: block;
+  left: 0;
+  width: 120px;
+  padding: 0;
+  top: -20px;
+}
+
+.footerContainer .collaborationsLinks h1 {
+  font-size: 20px;
+  position: relative;
+  display: block;
+  top: 10px;
+}
+
+.footerContainer .collaborationsLinks .link {
+  position: relative;
+  display: block;
+  width: 100px;
+  font-size: 15px;
+}
+
 @-webkit-keyframes example {
   0% {
     background-position: 0% 11%;
@@ -359,7 +624,6 @@ html a:active, body a:active {
   display: block;
   width: 100%;
   height: 100%;
-  top: 30;
   color: white;
 }
 
@@ -485,164 +749,6 @@ html a:active, body a:active {
 
 .container .mailSended {
   height: 500px;
-}
-
-.container footer {
-  width: 100%;
-  height: auto;
-  background: #ffffff;
-  border-top: 1px solid #bbbbbb;
-  color: #5c5c5c;
-}
-
-.container .footerContainer {
-  position: relative;
-  display: block;
-  padding: 20px 30px;
-}
-
-.container .footerContainer .arrow {
-  width: 15px;
-  position: relative;
-  display: none;
-  left: 10px;
-  top: 2px;
-  -webkit-transition: .3s;
-  transition: .3s;
-}
-
-.container .footerContainer .arrow img {
-  width: 100%;
-}
-
-.container .footerContainer a {
-  color: #5c5c5c;
-  text-decoration: none;
-  -webkit-transition: .3s;
-  transition: .3s;
-}
-
-.container .footerContainer ul .link:hover a {
-  color: #383838;
-  text-decoration: underline;
-}
-
-.container .footerContainer .authorContainer {
-  position: relative;
-  display: block;
-  height: 60px;
-  width: 200px;
-  margin: 0 auto;
-}
-
-.container .footerContainer .authorContainer ul {
-  text-align: center;
-  padding-left: 0;
-  list-style: none;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  margin: 10px 0;
-}
-
-.container .footerContainer .authorContainer ul .logoContainer {
-  width: 60px;
-  height: 60px;
-  -webkit-filter: grayscale(1);
-          filter: grayscale(1);
-}
-
-.container .footerContainer .authorContainer ul img {
-  width: 80%;
-  position: relative;
-  opacity: .8;
-  top: 7px;
-}
-
-.container .footerContainer .authorContainer ul span {
-  position: relative;
-  display: block;
-  top: 4px;
-  font-size: 20px;
-}
-
-.container .footerContainer .links {
-  list-style: none;
-  position: relative;
-  display: block;
-  left: 0;
-  width: 120px;
-  padding: 0;
-  top: -20px;
-}
-
-.container .footerContainer .links h1 {
-  font-size: 20px;
-  position: relative;
-  display: block;
-  top: 10px;
-}
-
-.container .footerContainer .links .link {
-  position: relative;
-  display: block;
-  font-size: 15px;
-}
-
-.container .footerContainer .copyrights {
-  position: relative;
-  display: block;
-  font-size: 14px;
-  text-align: center;
-}
-
-.container .footerContainer .otherLinks {
-  list-style: none;
-  position: relative;
-  display: block;
-  left: 0;
-  width: 120px;
-  padding: 0;
-  top: -20px;
-}
-
-.container .footerContainer .otherLinks h1 {
-  font-size: 20px;
-  position: relative;
-  display: block;
-  top: 10px;
-}
-
-.container .footerContainer .otherLinks .link {
-  position: relative;
-  display: block;
-  width: 100px;
-  font-size: 15px;
-}
-
-.container .footerContainer .collaborationsLinks {
-  list-style: none;
-  position: relative;
-  display: block;
-  left: 0;
-  width: 120px;
-  padding: 0;
-  top: -20px;
-}
-
-.container .footerContainer .collaborationsLinks h1 {
-  font-size: 20px;
-  position: relative;
-  display: block;
-  top: 10px;
-}
-
-.container .footerContainer .collaborationsLinks .link {
-  position: relative;
-  display: block;
-  width: 100px;
-  font-size: 15px;
 }
 
 .container a {
@@ -1714,6 +1820,10 @@ html a:active, body a:active {
 }
 
 @media only screen and (min-width: 1440px) {
+  .nf .button:hover {
+    background: white;
+    color: #4552ff;
+  }
   .navbar .nav-brand {
     left: 340px !important;
   }

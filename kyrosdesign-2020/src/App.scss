@@ -87,6 +87,124 @@ html, body{
     outline: none;
 }
 
+//404
+.nf{
+    display: block;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    h1{
+        color: $titleColor;
+    }
+    h3 {
+        margin: 1em auto;
+        width: 14em;
+        color: $subtitleColor;
+        font-weight: 400;
+    }
+    .button{
+        width: 10em;
+        border-radius: 1em .3em 1em .3em;
+        margin: 0 auto;
+        color: white;
+        background: $mainColor;
+        text-decoration: none;
+        transition: .3s;
+    }
+}
+
+
+//
+//SERVICES PAGE
+//
+
+.page{
+    width: 100%;
+    height: 100%;
+
+    .pageTitle{
+        font-size: 2rem;
+        width: 10em;
+        text-align: center;
+        font-weight: 600;
+        margin: 2em auto;
+    }
+
+    .serviceList{
+        width: 100%;
+        height: auto;
+        list-style: none;
+        padding: 0;
+
+        li.service {
+            position: relative;
+            display: block;
+            margin-bottom: 3em;
+            -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0 , 0.05);
+            -moz-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0 ,.05);
+            box-shadow: 0px 0px 25px 0px rgba(0, 0, 0 , .05);
+            padding: 2em;
+            padding-bottom: 3em;
+            overflow: hidden;
+
+            .imageContainer{
+                background: red;
+                margin-left: -2em;
+                width: calc(100% + 4em);
+                height: 13em;
+                margin-top: -2em;
+
+                img{
+                    width: 100%;
+                }
+
+            }
+
+            .serviceTitle{
+                font-size: 2.3rem;
+            }
+
+            .serviceDescription{
+                font-size: .9rem;
+                color: $subtitleColor;
+                line-height: 1.7rem;
+            }
+
+            ul{
+                padding: 0;
+                list-style-type: disc;
+                margin-left: 2em;
+                li {
+                    font-size: 1.3em;
+                    padding: .2em;
+                    margin: .3em 0;
+                    font-weight: 500;
+                    color: $subtitleColor;
+                }
+            }
+
+        }
+
+        li.service:nth-child(1) {
+            border-radius: 0 5em 0 0;
+        }
+
+        li.service:nth-child(2) {
+            border-radius: 0 0 5em 0;
+        }
+
+    }
+
+}
+
+//
+//SERVICES PAGE END
+//
+
+
+
 //WORKFLOW
 .workFlowContainer{
     position: relative;
@@ -353,6 +471,181 @@ html, body{
 
 }
 
+
+//
+//FOOTER
+//
+
+footer{
+    width: 100%;
+    height: auto;
+    background: $footer;
+    border-top: 1px solid #bbbbbb;
+    color: $footerColor;
+}
+
+.footerContainer{
+
+    position: relative;
+    display: block;
+    padding: 20px 30px; 
+
+    .arrow{
+        width: 15px;
+        position: relative;
+        display: none;
+        left: 10px;
+        top: 2px;
+        transition: .3s;
+
+        img{
+            width: 100%;
+        }
+
+    }
+
+    a{
+        color: $footerColor !important;
+        text-decoration: none;
+        transition: .3s;
+    }
+
+    ul .link:hover a{
+        color: $footerColorHover;
+        text-decoration: underline;
+    }
+
+    .authorContainer{
+        position: relative;
+        display: block;
+        height: 60px;
+        width: 200px;
+        margin: 0 auto;
+
+        ul{
+            text-align: center;
+            padding-left: 0;
+            list-style: none;
+            display: inline-flex;
+            position: relative;
+            margin: 10px 0;
+
+            .logoContainer{
+                width: 60px;
+                height: 60px;
+                filter: grayscale(1);
+
+            }
+
+            img{
+                width: 80%;
+                position: relative;
+                opacity: .8;
+                top: 7px;
+            }
+
+            span{
+                position: relative;
+                display: block;
+                top: 4px;
+                font-size: 20px;
+            }
+
+        }
+
+    }
+
+    .links{
+        list-style: none;
+        position: relative;
+        display: block;
+        left: 0;
+        width: 120px;
+        padding: 0;
+        top: -20px;
+
+        h1{
+            font-size: 20px;
+            position: relative;
+            display: block;
+            top: 10px;
+        }
+
+        .link{
+            position: relative;
+            display: block;
+            font-size: 15px;
+        }
+
+    }
+
+    .copyrights{
+        position: relative;
+        display: block;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .otherLinks{
+
+        list-style: none;
+        position: relative;
+        display: block;
+        left: 0;
+        width: 120px;
+        padding: 0;
+        top: -20px;
+
+        h1{
+            font-size: 20px;
+            position: relative;
+            display: block;
+            top: 10px;
+        }
+
+        .link{
+            position: relative;
+            display: block;
+            width: 100px;
+            font-size: 15px;
+        }
+
+        
+    }
+
+    .collaborationsLinks{
+
+        list-style: none;
+        position: relative;
+        display: block;
+        left: 0;
+        width: 120px;
+        padding: 0;
+        top: -20px;
+
+        h1{
+            font-size: 20px;
+            position: relative;
+            display: block;
+            top: 10px;
+        }
+
+        .link{
+            position: relative;
+            display: block;
+            width: 100px;
+            font-size: 15px;
+        }
+
+        
+    }
+    
+}
+
+//
+//FOOTER END
+//
+
 @keyframes example {
     0%{
         background-position: 0% 11%;
@@ -373,7 +666,6 @@ html, body{
     display: block;
     width: 100%;
     height: 100%;
-    top: 30;
     color: white;
 
     .coloredText {
@@ -502,175 +794,6 @@ html, body{
 
     .mailSended{
         height: 500px;
-    }
-
-
-    //Footer
-
-    footer{
-        width: 100%;
-        height: auto;
-        background: $footer;
-        border-top: 1px solid #bbbbbb;
-        color: $footerColor;
-    }
-
-    .footerContainer{
-
-        position: relative;
-        display: block;
-        padding: 20px 30px; 
-
-        .arrow{
-            width: 15px;
-            position: relative;
-            display: none;
-            left: 10px;
-            top: 2px;
-            transition: .3s;
-
-            img{
-                width: 100%;
-            }
-
-        }
-
-        a{
-            color: $footerColor;
-            text-decoration: none;
-            transition: .3s;
-        }
-
-        ul .link:hover a{
-            color: $footerColorHover;
-            text-decoration: underline;
-        }
-
-        .authorContainer{
-            position: relative;
-            display: block;
-            height: 60px;
-            width: 200px;
-            margin: 0 auto;
-
-            ul{
-                text-align: center;
-                padding-left: 0;
-                list-style: none;
-                display: inline-flex;
-                position: relative;
-                margin: 10px 0;
-
-                .logoContainer{
-                    width: 60px;
-                    height: 60px;
-                    filter: grayscale(1);
-
-                }
-
-                img{
-                    width: 80%;
-                    position: relative;
-                    opacity: .8;
-                    top: 7px;
-                }
-
-                span{
-                    position: relative;
-                    display: block;
-                    top: 4px;
-                    font-size: 20px;
-                }
-
-            }
-
-        }
-
-        .links{
-            list-style: none;
-            position: relative;
-            display: block;
-            left: 0;
-            width: 120px;
-            padding: 0;
-            top: -20px;
-
-            h1{
-                font-size: 20px;
-                position: relative;
-                display: block;
-                top: 10px;
-            }
-
-            .link{
-                position: relative;
-                display: block;
-                font-size: 15px;
-            }
-
-        }
-
-        .copyrights{
-            position: relative;
-            display: block;
-            font-size: 14px;
-            text-align: center;
-        }
-
-        .otherLinks{
-
-            list-style: none;
-            position: relative;
-            display: block;
-            left: 0;
-            width: 120px;
-            padding: 0;
-            top: -20px;
-
-            h1{
-                font-size: 20px;
-                position: relative;
-                display: block;
-                top: 10px;
-            }
-
-            .link{
-                position: relative;
-                display: block;
-                width: 100px;
-                font-size: 15px;
-            }
-
-            
-        }
-
-        .collaborationsLinks{
-
-            list-style: none;
-            position: relative;
-            display: block;
-            left: 0;
-            width: 120px;
-            padding: 0;
-            top: -20px;
-
-            h1{
-                font-size: 20px;
-                position: relative;
-                display: block;
-                top: 10px;
-            }
-
-            .link{
-                position: relative;
-                display: block;
-                width: 100px;
-                font-size: 15px;
-            }
-
-            
-        }
-        
     }
 
     a{
@@ -1541,6 +1664,7 @@ html, body{
 //Kindle Fire HDX
 
 @media only screen and (min-width: 800px) {
+
     .homePage{
 
         .swipe{
@@ -1916,6 +2040,15 @@ html, body{
 //Laptop with HiDPI screen
 
 @media only screen and (min-width: 1440px) {
+
+    .nf {
+
+        .button:hover{
+            background: white;
+            color: $mainColor;
+        }
+
+    }
 
     .navbar{
         .nav-brand{

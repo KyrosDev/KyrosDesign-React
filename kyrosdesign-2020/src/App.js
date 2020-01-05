@@ -12,11 +12,12 @@ import Terms from "./components/terms";
 import Cookies from "./components/cookies";
 import Policy from "./components/policy";
 import Services from './components/Services';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <React.Fragment>
-    <Navbar />
+      <Navbar />
       <Switch>
         <Route exact path="/" component={Homepage} />
         <Route path="/services" component={Services} />
