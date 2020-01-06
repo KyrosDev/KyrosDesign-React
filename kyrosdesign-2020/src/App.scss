@@ -20,7 +20,7 @@ $footerColorHover: #383838;
 $footerColor: #5c5c5c;
 $mainColor: #4552ff;
 
-//
+/*
 //SCROLLBAR
 //
 
@@ -42,6 +42,10 @@ $mainColor: #4552ff;
     background: #3841ca;
     transition: .3s;
 }
+
+//
+// END SCROLLBAR
+*/
 
 *{
     -webkit-tap-highlight-color: transparent;
@@ -1452,6 +1456,18 @@ footer{
 //iPad Mini
 
 @media only screen and (min-width: 768px) {
+    
+
+    .page {
+        ul.serviceList{
+            li.service{
+                .imageContainer{
+                    height: 30em;
+                }
+            }
+        }
+    }
+
     .homePage{
         top: 160px !important;
         width: 400px !important;
@@ -1630,40 +1646,26 @@ footer{
 
     }
 
-
-    footer{
-        overflow: hidden;
-
-        .authorContainer{
-            margin: 0 !important;
-            left: 10% !important;
-            position: relative !important;
-            display: block !important;
-            top: 130px !important;
-            margin-left: 0px !important;
-
-        }
-
-        .footerLinks{
-            position: relative !important;
-            display:  flex !important;
-            flex-direction: row !important;
-            left: 50% !important;
-
-            ul{
-                margin-right: 30px !important;
-            }
-
-        }
-
-    }
-
-
 }
 
 //Kindle Fire HDX
 
 @media only screen and (min-width: 800px) {
+
+    .page{
+
+        ul.serviceList{
+
+            li.service{
+                .imageContainer{
+                    height: 30em;
+                }
+            }
+
+        }
+
+
+    }
 
     .homePage{
 
@@ -1700,6 +1702,33 @@ footer{
 //iPad Pro
 
 @media only screen and (min-width: 1024px) {
+
+    footer{
+        overflow: hidden;
+
+        .authorContainer{
+            margin: 0 !important;
+            left: 5% !important;
+            position: relative !important;
+            display: block !important;
+            top: 100px !important;
+            margin-left: 0px !important;
+
+        }
+
+        .footerLinks{
+            position: relative !important;
+            display:  flex !important;
+            flex-direction: row !important;
+            left: 45% !important;
+
+            ul{
+                margin-right: 30px !important;
+            }
+
+        }
+
+    }
 
     .navbar{
 
@@ -1934,6 +1963,62 @@ footer{
 
 @media only screen and (min-width: 1280px) {
 
+    .page{
+
+        ul.serviceList{
+
+            li.service{
+
+                display: flex;
+                flex-direction: row;
+                padding-bottom: 0;
+
+                .imageContainer{
+                    width: 45em;
+                    height: 32em;
+                }
+
+                .right{
+                    box-sizing: border-box;
+                    width: 40em;
+                    margin: 0 2em;
+
+                    ul{
+
+                        li{
+                            transition: .3s;
+                            cursor: pointer;
+                        }
+
+                        li:hover{
+
+                            margin-left: 1em;
+                            color: $titleColor
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    .navbar{
+
+        .nav-brand{
+            left: 140px !important;
+        }
+
+        .menu{
+            right: 140px !important;
+        }
+
+    }
+
     .homePage{
 
         top: 140px !important;
@@ -2041,6 +2126,48 @@ footer{
 
 @media only screen and (min-width: 1440px) {
 
+    .page{
+
+        ul.serviceList{
+
+            width: 70%;
+            margin: 0 auto;
+
+            li.service{
+
+                display: flex;
+                flex-direction: row;
+                padding-bottom: 0;
+
+                .imageContainer{
+                    width: 45em;
+                    height: 32em;
+                }
+
+                .right{
+                    box-sizing: border-box;
+                    width: 40em;
+                    margin: 0 2em;
+                }
+
+            }
+
+        }
+
+    }
+
+    .navbar{
+
+        .nav-brand{
+            left: 180px !important;
+        }
+
+        .menu{
+            right: 180px !important;
+        }
+
+    }
+
     .nf {
 
         .button:hover{
@@ -2048,16 +2175,6 @@ footer{
             color: $mainColor;
         }
 
-    }
-
-    .navbar{
-        .nav-brand{
-            left: 340px !important;
-        }
-
-        .menu{
-            right: 340px !important;
-        }
     }
 
     .homePage{
@@ -2151,6 +2268,26 @@ footer{
 //2200px
 
 @media only screen and (min-width: 2200px) {
+
+    .navbar{
+
+        .nav-brand{
+            left: 340px !important;
+        }
+
+        .menu{
+            right: 340px !important;
+        }
+
+    }
+
+    .page{
+
+        ul.serviceList{
+
+            width: 50%;
+        }
+    }
 
     .homePage{
 

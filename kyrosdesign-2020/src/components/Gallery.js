@@ -21,6 +21,11 @@ for (const [index, value] of projects.entries()) {
 }
 
 export default class Gallery extends Component {
+
+  componentDidMount() {
+    document.title += "| Projects"
+  }
+
   render() {
     return (
       <div className="portfolio">

@@ -18,7 +18,7 @@ export default class Homepage extends Component {
 
 
   componentDidMount() {
-    document.title += " | Designers and Developers"
+    document.title = "MediaDesign | Designers and Developers"
   }
 
 

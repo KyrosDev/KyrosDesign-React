@@ -2,31 +2,32 @@
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,700,800");
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,800");
+/*
+//SCROLLBAR
+//
+
 ::-webkit-scrollbar {
-  width: 7px;
-  -webkit-transition: .3s;
-  transition: .3s;
+    width: 7px;
+    transition: .3s;
 }
-
 ::-webkit-scrollbar-track {
-  background: white;
-  -webkit-transition: .3s;
-  transition: .3s;
-}
+    background: white;
+    transition: .3s;
 
+}
 ::-webkit-scrollbar-thumb {
-  border-radius: 30px;
-  background: #4552ff;
-  -webkit-transition: .3s;
-  transition: .3s;
+    border-radius: 30px;
+    background: $mainColor;
+    transition: .3s;
 }
-
 ::-webkit-scrollbar-thumb:hover {
-  background: #3841ca;
-  -webkit-transition: .3s;
-  transition: .3s;
+    background: #3841ca;
+    transition: .3s;
 }
 
+//
+// END SCROLLBAR
+*/
 * {
   -webkit-tap-highlight-color: transparent;
 }
@@ -1413,6 +1414,9 @@ footer {
 }
 
 @media only screen and (min-width: 768px) {
+  .page ul.serviceList li.service .imageContainer {
+    height: 30em;
+  }
   .homePage {
     top: 160px !important;
     width: 400px !important;
@@ -1552,34 +1556,12 @@ footer {
     -webkit-transform: translate(-50%, 0) !important;
             transform: translate(-50%, 0) !important;
   }
-  footer {
-    overflow: hidden;
-  }
-  footer .authorContainer {
-    margin: 0 !important;
-    left: 10% !important;
-    position: relative !important;
-    display: block !important;
-    top: 130px !important;
-    margin-left: 0px !important;
-  }
-  footer .footerLinks {
-    position: relative !important;
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-    -webkit-box-orient: horizontal !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: row !important;
-            flex-direction: row !important;
-    left: 50% !important;
-  }
-  footer .footerLinks ul {
-    margin-right: 30px !important;
-  }
 }
 
 @media only screen and (min-width: 800px) {
+  .page ul.serviceList li.service .imageContainer {
+    height: 30em;
+  }
   .homePage .swipe {
     left: 74% !important;
   }
@@ -1592,6 +1574,31 @@ footer {
 }
 
 @media only screen and (min-width: 1024px) {
+  footer {
+    overflow: hidden;
+  }
+  footer .authorContainer {
+    margin: 0 !important;
+    left: 5% !important;
+    position: relative !important;
+    display: block !important;
+    top: 100px !important;
+    margin-left: 0px !important;
+  }
+  footer .footerLinks {
+    position: relative !important;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    left: 45% !important;
+  }
+  footer .footerLinks ul {
+    margin-right: 30px !important;
+  }
   .navbar .nav-brand {
     left: 90px !important;
   }
@@ -1755,6 +1762,41 @@ footer {
 }
 
 @media only screen and (min-width: 1280px) {
+  .page ul.serviceList li.service {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-bottom: 0;
+  }
+  .page ul.serviceList li.service .imageContainer {
+    width: 45em;
+    height: 32em;
+  }
+  .page ul.serviceList li.service .right {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 40em;
+    margin: 0 2em;
+  }
+  .page ul.serviceList li.service .right ul li {
+    -webkit-transition: .3s;
+    transition: .3s;
+    cursor: pointer;
+  }
+  .page ul.serviceList li.service .right ul li:hover {
+    margin-left: 1em;
+    color: #292b31;
+  }
+  .navbar .nav-brand {
+    left: 140px !important;
+  }
+  .navbar .menu {
+    right: 140px !important;
+  }
   .homePage {
     top: 140px !important;
     z-index: 3;
@@ -1820,15 +1862,39 @@ footer {
 }
 
 @media only screen and (min-width: 1440px) {
+  .page ul.serviceList {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .page ul.serviceList li.service {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-bottom: 0;
+  }
+  .page ul.serviceList li.service .imageContainer {
+    width: 45em;
+    height: 32em;
+  }
+  .page ul.serviceList li.service .right {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 40em;
+    margin: 0 2em;
+  }
+  .navbar .nav-brand {
+    left: 180px !important;
+  }
+  .navbar .menu {
+    right: 180px !important;
+  }
   .nf .button:hover {
     background: white;
     color: #4552ff;
-  }
-  .navbar .nav-brand {
-    left: 340px !important;
-  }
-  .navbar .menu {
-    right: 340px !important;
   }
   .homePage {
     top: 180px !important;
@@ -1878,6 +1944,15 @@ footer {
 }
 
 @media only screen and (min-width: 2200px) {
+  .navbar .nav-brand {
+    left: 340px !important;
+  }
+  .navbar .menu {
+    right: 340px !important;
+  }
+  .page ul.serviceList {
+    width: 50%;
+  }
   .homePage {
     top: 350px !important;
   }

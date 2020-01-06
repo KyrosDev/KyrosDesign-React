@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 
-export default class Policy extends Component {
-
+export default class Store extends Component {
   render() {
     return (
-      <div>Policy </div>
+      <div> Store </div>
     );
   }
 }

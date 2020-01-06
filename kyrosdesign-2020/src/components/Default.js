@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default class Default extends Component {
 
   componentDidMount(){
-    document.title += " | Whoops..."
+    document.title = "MediaDesign | Whoops...";
   }
 
   render() {

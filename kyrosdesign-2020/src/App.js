@@ -12,7 +12,7 @@ import Terms from "./components/terms";
 import Cookies from "./components/cookies";
 import Policy from "./components/policy";
 import Services from './components/Services';
-import Footer from './components/Footer';
+import Store from './components/Store';
 
 function App() {
   return (
@@ -21,8 +21,9 @@ function App() {
       <Switch>
         <Route exact path="/" component={Homepage} />
         <Route path="/services" component={Services} />
-        <Route path="/portfolio" component={Gallery} />
+        <Route path="/projects" component={Gallery} />
         <Route path="/terms" component={Terms} />
+        <Route path="/store" component={Store} />
         <Route path="/cookies" component={Cookies} />
         <Route path="/policy" component={Policy} />
         <Route path="/details" component={Details}/>
