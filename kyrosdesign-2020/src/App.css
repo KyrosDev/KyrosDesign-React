@@ -139,15 +139,16 @@ html a:active, body a:active {
 }
 
 .page .serviceList li.service .imageContainer {
-  background: red;
   margin-left: -2em;
   width: calc(100% + 4em);
   height: 13em;
   margin-top: -2em;
+  overflow: hidden;
 }
 
 .page .serviceList li.service .imageContainer img {
   width: 100%;
+  background-size: cover;
 }
 
 .page .serviceList li.service .serviceTitle {
@@ -180,6 +181,86 @@ html a:active, body a:active {
 
 .page .serviceList li.service:nth-child(2) {
   border-radius: 0 0 5em 0;
+}
+
+.founders {
+  width: 100%;
+}
+
+.founders .founderCards {
+  list-style: none;
+  color: #4b4b4b;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0;
+  height: 470px;
+  overflow: hidden;
+}
+
+.founders .founderCards li.founderCard {
+  padding: 30px;
+  width: 100%;
+  margin: 20px 20px;
+  border-radius: 50px 0 50px 0;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 44px 0px rgba(0, 0, 0, 0.06);
+  box-shadow: 0px 0px 44px 0px rgba(0, 0, 0, 0.06);
+}
+
+.founders .founderCards li.founderCard .founderInfos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.founders .founderCards li.founderCard .founderInfos .imageContainer {
+  width: 50px;
+  height: 50px;
+}
+
+.founders .founderCards li.founderCard .founderInfos .imageContainer img {
+  border: 2px solid #4552ff;
+  border-radius: 100px;
+  width: 100%;
+}
+
+.founders .founderCards li.founderCard .founderInfos span {
+  color: #292b31;
+  font-weight: 600;
+  padding: 2px 25px;
+  height: 25px;
+  font-size: 16px;
+}
+
+.founders .founderCards li.founderCard .founderInfos p {
+  font-size: 12px;
+  color: #4b4b4b;
+  margin-top: -20px;
+  margin-left: 75px;
+}
+
+.founders .founderCards .founderCard.activated {
+  -webkit-transform: translateX(120%);
+          transform: translateX(120%);
+}
+
+.founders .founderCards .founderCard.disabled {
+  -webkit-transform: translateX(0%) translateY(-110%);
+          transform: translateX(0%) translateY(-110%);
 }
 
 .workFlowContainer {
@@ -516,6 +597,10 @@ footer {
   display: block;
   top: 4px;
   font-size: 20px;
+}
+
+.footerContainer span.mail {
+  color: #292b31;
 }
 
 .footerContainer .links {
@@ -1561,6 +1646,9 @@ footer {
 @media only screen and (min-width: 800px) {
   .page ul.serviceList li.service .imageContainer {
     height: 30em;
+  }
+  .page ul.serviceList li.service .imageContainer img {
+    margin: 5em 2em;
   }
   .homePage .swipe {
     left: 74% !important;

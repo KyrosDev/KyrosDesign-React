@@ -154,14 +154,15 @@ html, body{
             overflow: hidden;
 
             .imageContainer{
-                background: red;
                 margin-left: -2em;
                 width: calc(100% + 4em);
                 height: 13em;
                 margin-top: -2em;
+                overflow: hidden;
 
                 img{
                     width: 100%;
+                    background-size: cover;
                 }
 
             }
@@ -207,7 +208,96 @@ html, body{
 //SERVICES PAGE END
 //
 
+//////////////////////////////////
 
+//
+//
+// ABOUT US SECTION
+//
+//
+
+.founders{
+
+    width: 100%;
+
+    .founderCards{
+
+        list-style: none;
+        color: $subtitleColor;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0;
+        height: 470px;
+        overflow: hidden;
+        
+        li.founderCard{
+            padding: 30px;
+            width: 100%;
+            margin: 20px 20px;
+            border-radius: 50px 0 50px 0;
+            overflow: hidden;
+            -webkit-box-shadow: 0px 0px 44px 0px rgba(0,0,0,0.06);
+            -moz-box-shadow: 0px 0px 44px 0px rgba(0,0,0,0.06);
+            box-shadow: 0px 0px 44px 0px rgba(0,0,0,0.06);
+
+            .founderInfos{
+
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+
+                .imageContainer{
+                    width: 50px;
+                    height: 50px;
+                    
+                    img{
+                        border: 2px solid $mainColor;
+                        border-radius: 100px;
+                        width: 100%;
+                    }
+
+                }
+                span{
+                    color: $titleColor;
+                    font-weight: 600;
+                    padding: 2px 25px;
+                    height: 25px;
+                    font-size: 16px;
+                }
+
+                p{
+                    font-size: 12px;
+                    color: $subtitleColor;
+                    margin-top: -20px;
+                    margin-left: 75px;
+                }
+
+
+            }
+
+
+        }
+
+        .founderCard.activated{
+            transform: translateX(120%);
+        }
+
+        .founderCard.disabled{
+            transform: translateX(0%) translateY(-110%);
+        }
+
+    }
+}
+
+//
+//
+// END ABOUT US SECTION
+//
+//
+
+/////////////////////////////////////
 
 //WORKFLOW
 .workFlowContainer{
@@ -557,6 +647,10 @@ footer{
 
         }
 
+    }
+
+    span.mail{
+        color: $titleColor;
     }
 
     .links{
@@ -1267,7 +1361,9 @@ footer{
 }
 
 //
+//
 // QUERIES
+//
 //
 
 @media only screen and (min-width: 360px){
@@ -1659,6 +1755,11 @@ footer{
             li.service{
                 .imageContainer{
                     height: 30em;
+
+                    img{
+                        margin: 5em 2em;
+                    }
+                
                 }
             }
 

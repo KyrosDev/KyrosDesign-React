@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Footer from './Footer';
+import motion from './img/services/motion.png'
+import design from './img/services/design.png'
 
 document.title = "MediaDesign | Services"
 
@@ -12,7 +14,7 @@ export default class ServicesPage extends Component {
         <ul className="serviceList">
           <li className="service">
             <div className="imageContainer">
-              <img src="" alt=""/>
+              <img src={design} alt="Design"/>
             </div>
             <div className="right">
               <h1 className="serviceTitle">Design</h1>
@@ -38,7 +40,7 @@ export default class ServicesPage extends Component {
           </li>
           <li className="service">
             <div className="imageContainer">
-              <img src="" alt=""/>
+              <img src={motion} alt="Motion"/>
             </div>
             <div className="right">
               <h1 className="serviceTitle">Motion</h1>

@@ -3,6 +3,7 @@ import Footer from "./Footer";
 import Workflow from './Workflow';
 import Services from './ServicesHomepage';
 import Contact from './Contact';
+import FoundersCard from './Founders';
 
 export default class Homepage extends Component {
 
@@ -38,6 +39,7 @@ export default class Homepage extends Component {
         </div>
         <Workflow       />
         <Services       />
+        <FoundersCard   />
         <Contact        />
         <Footer         />
       </div>
