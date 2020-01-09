@@ -187,6 +187,47 @@ html a:active, body a:active {
   width: 100%;
 }
 
+.founders .indexes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style: none;
+  width: 30px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.founders .indexes .index {
+  cursor: pointer;
+  height: 20px;
+  margin: 0 4px;
+}
+
+.founders .indexes .index .dot {
+  display: block;
+  border-radius: 20px;
+  background-color: #4b4b4b;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.founders .indexes .index .dot.activated {
+  width: 12px;
+  height: 12px;
+  background-color: #292b31;
+}
+
+.founders .indexes .index .dot.disabled {
+  width: 8px;
+  height: 8px;
+}
+
 .founders .founderCards {
   list-style: none;
   color: #4b4b4b;
@@ -201,7 +242,7 @@ html a:active, body a:active {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 0;
-  height: 470px;
+  height: 540px;
   overflow: hidden;
 }
 
@@ -212,7 +253,9 @@ html a:active, body a:active {
   border-radius: 50px 0 50px 0;
   overflow: hidden;
   -webkit-box-shadow: 0px 0px 44px 0px rgba(0, 0, 0, 0.06);
-  box-shadow: 0px 0px 44px 0px rgba(0, 0, 0, 0.06);
+          box-shadow: 0px 0px 44px 0px rgba(0, 0, 0, 0.06);
+  -webkit-transition: .6s;
+  transition: .6s;
 }
 
 .founders .founderCards li.founderCard .founderInfos {
@@ -243,7 +286,7 @@ html a:active, body a:active {
   font-weight: 600;
   padding: 2px 25px;
   height: 25px;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .founders .founderCards li.founderCard .founderInfos p {
@@ -254,11 +297,21 @@ html a:active, body a:active {
 }
 
 .founders .founderCards .founderCard.activated {
-  -webkit-transform: translateX(120%);
-          transform: translateX(120%);
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
 }
 
-.founders .founderCards .founderCard.disabled {
+.founders .founderCards .founderCard.disabled.left {
+  -webkit-transform: translateX(-120%);
+          transform: translateX(-120%);
+}
+
+.founders .founderCards .founderCard.disabled.right {
+  -webkit-transform: translateX(120%) translateY(-110%);
+          transform: translateX(120%) translateY(-110%);
+}
+
+.founders .founderCards .founderCard.activated.right {
   -webkit-transform: translateX(0%) translateY(-110%);
           transform: translateX(0%) translateY(-110%);
 }
@@ -1018,19 +1071,11 @@ footer {
   text-decoration: none;
 }
 
-.navbar .menu.opened .menu-item:nth-child(5) .menu-link {
-  color: #4552ff;
-}
-
-.navbar .menu.opened .menu-item:nth-child(5) {
-  border: 2px solid #4552ff;
-}
-
-.navbar .menu.opened .menu-item:nth-child(5):hover {
+.navbar .menu.opened .color {
   background: #4552ff;
 }
 
-.navbar .menu.opened .menu-item:nth-child(5):hover .menu-link {
+.navbar .menu.opened .color .menu-link {
   color: white;
 }
 
@@ -1084,19 +1129,11 @@ footer {
   text-decoration: none;
 }
 
-.navbar .menu.closed .menu-item:nth-child(5) .menu-link {
-  color: #4552ff;
-}
-
-.navbar .menu.closed .menu-item:nth-child(5) {
-  border: 2px solid #4552ff;
-}
-
-.navbar .menu.closed .menu-item:nth-child(5):hover {
+.navbar .menu.closed .color {
   background: #4552ff;
 }
 
-.navbar .menu.closed .menu-item:nth-child(5):hover .menu-link {
+.navbar .menu.closed .color .menu-link {
   color: white;
 }
 
@@ -1355,6 +1392,9 @@ footer {
 }
 
 @media only screen and (min-width: 360px) {
+  .founders .founderCards {
+    height: 460px !important;
+  }
   .homePage {
     top: 130px !important;
     width: 300px !important;
@@ -1390,6 +1430,11 @@ footer {
 }
 
 @media only screen and (min-width: 480px) {
+  .founders .founderCards {
+    width: 400px;
+    margin: 40px auto;
+    height: 430px !important;
+  }
   .homePage {
     top: 160px !important;
     width: 400px !important;
@@ -1499,6 +1544,11 @@ footer {
 }
 
 @media only screen and (min-width: 768px) {
+  .founders .founderCards {
+    width: 500px;
+    margin: 40px auto;
+    height: 400px !important;
+  }
   .page ul.serviceList li.service .imageContainer {
     height: 30em;
   }
@@ -1644,6 +1694,11 @@ footer {
 }
 
 @media only screen and (min-width: 800px) {
+  .founders .founderCards {
+    width: 500px;
+    margin: 40px auto;
+    height: 350px !important;
+  }
   .page ul.serviceList li.service .imageContainer {
     height: 30em;
   }
@@ -1837,6 +1892,14 @@ footer {
 }
 
 @media only screen and (min-width: 1057px) {
+  .founders .founderCards {
+    width: 550px;
+    margin: 40px auto;
+    height: 400px !important;
+  }
+  .founders .founderCards li .founderInfos .founderName {
+    width: 60%;
+  }
   .services ul {
     width: 700px !important;
     left: 40% !important;

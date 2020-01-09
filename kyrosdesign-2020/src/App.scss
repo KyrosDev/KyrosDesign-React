@@ -220,6 +220,43 @@ html, body{
 
     width: 100%;
 
+    .indexes{
+
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        width: 30px;
+        margin: 0 auto;
+        padding: 0;
+
+        .index{
+            cursor: pointer;
+            height: 20px;
+            margin: 0 4px;
+
+            .dot{
+                display: block;
+                border-radius: 20px;
+                background-color: $subtitleColor;
+                transform: translate(-50%, -50%);
+                transition: .4s;
+            }
+
+            .dot.activated{
+                width: 12px;
+                height: 12px;
+                background-color: $titleColor;
+            }
+
+            .dot.disabled{
+                width: 8px;
+                height: 8px;
+            }
+
+        }
+
+    }
+
     .founderCards{
 
         list-style: none;
@@ -229,8 +266,9 @@ html, body{
         flex-direction: row;
         flex-wrap: wrap;
         padding: 0;
-        height: 470px;
+        height: 540px;
         overflow: hidden;
+
         
         li.founderCard{
             padding: 30px;
@@ -238,9 +276,8 @@ html, body{
             margin: 20px 20px;
             border-radius: 50px 0 50px 0;
             overflow: hidden;
-            -webkit-box-shadow: 0px 0px 44px 0px rgba(0,0,0,0.06);
-            -moz-box-shadow: 0px 0px 44px 0px rgba(0,0,0,0.06);
             box-shadow: 0px 0px 44px 0px rgba(0,0,0,0.06);
+            transition: .6s;
 
             .founderInfos{
 
@@ -264,7 +301,7 @@ html, body{
                     font-weight: 600;
                     padding: 2px 25px;
                     height: 25px;
-                    font-size: 16px;
+                    font-size: 14px;
                 }
 
                 p{
@@ -281,10 +318,16 @@ html, body{
         }
 
         .founderCard.activated{
-            transform: translateX(120%);
+            transform: translateX(0%);
+        }
+        .founderCard.disabled.left{
+            transform: translateX(-120%);
         }
 
-        .founderCard.disabled{
+        .founderCard.disabled.right{
+            transform: translateX(120%) translateY(-110%);
+        }
+        .founderCard.activated.right{
             transform: translateX(0%) translateY(-110%);
         }
 
@@ -1059,22 +1102,16 @@ footer{
                 text-decoration: none;
             }
 
-        }
-        
-        .menu-item:nth-child(5) .menu-link{
-            color: $mainColor;
+
         }
 
-        .menu-item:nth-child(5){
-            border: 2px solid $mainColor;
-        }
-
-        .menu-item:nth-child(5):hover{
+        .color{
             background: $mainColor;
-        }
 
-        .menu-item:nth-child(5):hover .menu-link{
-            color: white;
+            .menu-link{
+                color: white;  
+            }
+
         }
 
     }
@@ -1122,22 +1159,16 @@ footer{
             }
 
         }
-        
-        .menu-item:nth-child(5) .menu-link{
-            color: $mainColor;
-        }
 
-        .menu-item:nth-child(5){
-            border: 2px solid $mainColor;
-        }
-
-        .menu-item:nth-child(5):hover{
+        .color{
             background: $mainColor;
-        }
 
-        .menu-item:nth-child(5):hover .menu-link{
-            color: white;
+            .menu-link{
+                color: white;  
+            }
+
         }
+        
     }
 
     .nav-brand{
@@ -1367,6 +1398,16 @@ footer{
 //
 
 @media only screen and (min-width: 360px){
+
+    .founders{
+
+        .founderCards{
+
+            height: 460px !important;
+
+        }
+    }
+    
     .homePage{
         top: 130px !important;
         width: 300px !important;
@@ -1411,6 +1452,18 @@ footer{
 //Nokia N9
 
 @media only screen and (min-width: 480px) {
+
+    .founders{
+
+        .founderCards{
+
+            width: 400px;
+            margin: 40px auto;
+            height: 430px !important;
+
+        }
+    }
+
     .homePage{
         top: 160px !important;
         width: 400px !important;
@@ -1553,6 +1606,16 @@ footer{
 
 @media only screen and (min-width: 768px) {
     
+    .founders{
+
+        .founderCards{
+
+            width: 500px;
+            margin: 40px auto;
+            height: 400px !important;
+        }
+
+    }
 
     .page {
         ul.serviceList{
@@ -1748,6 +1811,18 @@ footer{
 
 @media only screen and (min-width: 800px) {
 
+        
+    .founders{
+
+        .founderCards{
+
+            width: 500px;
+            margin: 40px auto;
+            height: 350px !important;
+
+        }
+    }
+
     .page{
 
         ul.serviceList{
@@ -1876,7 +1951,6 @@ footer{
                     text-decoration: none;
                     transition: .3s;
                 }
-
                 
             }
             li:hover .menu-link{
@@ -2032,6 +2106,33 @@ footer{
 //1057px
 
 @media only screen and (min-width: 1057px) {
+
+        
+    .founders{
+
+        .founderCards{
+
+            width: 550px;
+            margin: 40px auto;
+            height: 400px !important;
+
+            li{
+
+                .founderInfos{
+
+                    .founderName{
+
+                        width: 60%;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
 
     .services{
 

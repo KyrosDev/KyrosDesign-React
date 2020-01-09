@@ -38,8 +38,8 @@ export default class Navbar extends Component {
                     <li className="menu-item">
                         <Link to="/projects" className="menu-link">Projects</Link>
                     </li>
-                    <li className="menu-item">
-                        <Link to="/#contact" className="menu-link">Contact</Link>
+                    <li className="menu-item color">
+                        <a href="/" className="menu-link">Blog</a>
                     </li>
                 </div>
             </ul>
