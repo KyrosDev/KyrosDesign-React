@@ -131,8 +131,8 @@ html a:active, body a:active {
   position: relative;
   display: block;
   margin-bottom: 3em;
-  -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.05);
-  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
   padding: 2em;
   padding-bottom: 3em;
   overflow: hidden;
@@ -242,8 +242,9 @@ html a:active, body a:active {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 0;
-  height: 540px;
   overflow: hidden;
+  height: 540px;
+  -webkit-overflow-scrolling: touch;
 }
 
 .founders .founderCards li.founderCard {
@@ -252,8 +253,8 @@ html a:active, body a:active {
   margin: 20px 20px;
   border-radius: 50px 0 50px 0;
   overflow: hidden;
-  -webkit-box-shadow: 0px 0px 44px 0px rgba(0, 0, 0, 0.06);
-          box-shadow: 0px 0px 44px 0px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.06);
+          box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.06);
   -webkit-transition: .6s;
   transition: .6s;
 }
@@ -335,8 +336,8 @@ html a:active, body a:active {
   margin-bottom: 50px;
   border-radius: 10px;
   text-align: center;
-  -webkit-box-shadow: 0px 0px 44px 0px rgba(0, 0, 0, 0.06);
-  box-shadow: 0px 0px 44px 0px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.06);
+          box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.06);
 }
 
 .workFlowContainer ul li .logoContainer {
@@ -401,8 +402,7 @@ html a:active, body a:active {
   border-radius: 10px;
   margin-bottom: 50px;
   color: #292b31;
-  -webkit-box-shadow: 0px 0px 44px 0px rgba(0, 0, 0, 0.06);
-  box-shadow: 0px 0px 44px 0px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.06);
 }
 
 .services ul li .serviceTitle {
@@ -650,10 +650,6 @@ footer {
   display: block;
   top: 4px;
   font-size: 20px;
-}
-
-.footerContainer span.mail {
-  color: #292b31;
 }
 
 .footerContainer .links {
@@ -2144,5 +2140,9 @@ footer {
   footer .footerContainer .footerLinks {
     left: 1140px !important;
   }
+}
+
+.dark {
+  color: #292b31;
 }
 /*# sourceMappingURL=App.css.map */

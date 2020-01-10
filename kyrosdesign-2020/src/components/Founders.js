@@ -80,28 +80,30 @@ export default class FoundersCard extends Component {
       <section className="founders">
           <h1 className="sectionTitle">About us</h1>
           <h3 className="sectionSubtitle">We are two guys how love design and innovations.</h3>
-          <ul className="founderCards">
-              <li className="founderCard activated left">
-                  <div className="founderInfos">
-                      <div className="imageContainer">
-                          <img src={kyros} alt="" />
-                      </div>
-                      <span className="founderName">Vlad Alexandru</span>
-                      <p className="occupation">WebDeveloper and Designer</p>
-                  </div>
-                  <p className="founderDescription">Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione.</p>
-              </li>
-              <li className="founderCard disabled right">
-                  <div className="founderInfos">
-                      <div className="imageContainer">
-                          <img src={kyros} alt="" />
-                      </div>
-                      <span className="founderName">Nome Strafe</span>
-                      <p className="occupation">Modeller and Designer</p>
-                  </div>
-                  <p className="founderDescription">Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione.</p>
-              </li>
-          </ul>
+          <div className="scroll">
+            <ul className="founderCards">
+                <li className="founderCard activated left">
+                    <div className="founderInfos">
+                        <div className="imageContainer">
+                            <img src={kyros} alt="" />
+                        </div>
+                        <span className="founderName">Alexandru V.</span>
+                        <p className="occupation">WebDeveloper and Designer</p>
+                    </div>
+                    <p className="founderDescription">Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione.</p>
+                </li>
+                <li className="founderCard disabled right">
+                    <div className="founderInfos">
+                        <div className="imageContainer">
+                            <img src={kyros} alt="" />
+                        </div>
+                        <span className="founderName">Alessandro T.</span>
+                        <p className="occupation">Modeller and Designer</p>
+                    </div>
+                    <p className="founderDescription">Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione.</p>
+                </li>
+            </ul>
+          </div>
           <ul className="indexes">
               <li className="index">
                   <span className="dot activated"></span>

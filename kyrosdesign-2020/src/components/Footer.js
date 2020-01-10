@@ -55,8 +55,8 @@ export default class Footer extends Component {
               </li>
             </ul>
           </div>
-          <p className="copyrights">© 2020 Media Design. All rights reserved. Website designed by <a  href="https://www.instagram.com/__v.alecs__" rel="noopener noreferrer" target="_blank">KyrosDesign</a>.</p>
-          <p className="copyrights">For more info send an email at: <span className="mail">mediadesign.business@gmail.com</span></p>
+          <p className="copyrights">© 2020 Media Design. All rights reserved. Website designed by <a className="dark" href="https://www.instagram.com/__v.alecs__" rel="noopener noreferrer" target="_blank">KyrosDesign</a>.</p>
+          <p className="copyrights">For more info send an email at: <span className="dark">mediadesign.business@gmail.com</span></p>
         </div>
       </footer>
     );

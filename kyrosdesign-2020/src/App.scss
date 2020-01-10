@@ -146,9 +146,7 @@ html, body{
             position: relative;
             display: block;
             margin-bottom: 3em;
-            -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0 , 0.05);
-            -moz-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0 ,.05);
-            box-shadow: 0px 0px 25px 0px rgba(0, 0, 0 , .05);
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0 , .05);
             padding: 2em;
             padding-bottom: 3em;
             overflow: hidden;
@@ -266,8 +264,9 @@ html, body{
         flex-direction: row;
         flex-wrap: wrap;
         padding: 0;
-        height: 540px;
         overflow: hidden;
+        height: 540px;
+        -webkit-overflow-scrolling: touch;
 
         
         li.founderCard{
@@ -276,7 +275,7 @@ html, body{
             margin: 20px 20px;
             border-radius: 50px 0 50px 0;
             overflow: hidden;
-            box-shadow: 0px 0px 44px 0px rgba(0,0,0,0.06);
+            box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.06);
             transition: .6s;
 
             .founderInfos{
@@ -360,9 +359,7 @@ html, body{
             margin-bottom: 50px;
             border-radius: 10px;
             text-align: center;
-            -webkit-box-shadow: 0px 0px 44px 0px rgba(0,0,0,0.06);
-            -moz-box-shadow: 0px 0px 44px 0px rgba(0,0,0,0.06);
-            box-shadow: 0px 0px 44px 0px rgba(0,0,0,0.06);
+            box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.06);
 
             .logoContainer{
                 position: relative;
@@ -427,9 +424,7 @@ html, body{
             border-radius: 10px;
             margin-bottom: 50px;
             color: $titleColor;
-            -webkit-box-shadow: 0px 0px 44px 0px rgba(0,0,0,0.06);
-            -moz-box-shadow: 0px 0px 44px 0px rgba(0,0,0,0.06);
-            box-shadow: 0px 0px 44px 0px rgba(0,0,0,0.06);
+            -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.06);
 
             .serviceTitle{
                 width: calc(100% - 10px);
@@ -690,10 +685,6 @@ footer{
 
         }
 
-    }
-
-    span.mail{
-        color: $titleColor;
     }
 
     .links{
@@ -2574,3 +2565,8 @@ footer{
 
     }
 }
+
+.dark{
+    color: $titleColor;
+}
+
