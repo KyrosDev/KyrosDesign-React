@@ -424,7 +424,7 @@ html, body{
             border-radius: 10px;
             margin-bottom: 50px;
             color: $titleColor;
-            -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.06);
+            box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.06);
 
             .serviceTitle{
                 width: calc(100% - 10px);
