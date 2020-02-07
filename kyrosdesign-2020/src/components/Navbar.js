@@ -27,7 +27,7 @@ export default class Navbar extends Component {
                 <span />
                 <span />
             </div>: null}
-            <ul className={window.innerWidth < 1024?this.state.hasClass ? 'menu opened' : 'menu closed': "menu"}>
+            <ul className={window.innerWidth < 1024 ? this.state.hasClass ? 'menu opened' : 'menu closed': "menu"}>
                 <div className="navContainer">
                     <li className="menu-item">
                         <Link to="/" className="menu-link">Home</Link>

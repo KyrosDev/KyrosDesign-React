@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300i,400,900&display=swap");
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  background: #333645;
+  width: 100%;
+  height: 100%;
+}
+
+html ::-moz-selection, body ::-moz-selection {
+  background: #fc626a;
+  color: white;
+}
+
+html ::selection, body ::selection {
+  background: #fc626a;
+  color: white;
+}
+
+html section, body section {
+  height: 100vh;
+  width: 100%;
+}
+
+html section .left, body section .left {
+  width: 100%;
+  height: 50%;
+  display: block;
+  position: relative;
+  background: linear-gradient(-125deg, #fc626a 0%, #59308a 100%);
+}
+
+html section .titleComponent, body section .titleComponent {
+  padding: 20px;
+}
+
+html section .titleComponent .sectionTitleDriver, body section .titleComponent .sectionTitleDriver {
+  position: relative;
+  display: block;
+  width: 2.8em;
+  height: .5em;
+  background-color: #fc626a;
+  border-radius: 20px;
+}
+
+html section .titleComponent .sectionTitle, body section .titleComponent .sectionTitle {
+  font-weight: 900;
+  font-size: 3em;
+  margin: 0;
+  color: #ffffff;
+}
+
+html section .titleComponent .sectionSubtitle, body section .titleComponent .sectionSubtitle {
+  color: #ffffff7c;
+}
+
+html section .inlineList, body section .inlineList {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+html section .buttonsList, body section .buttonsList {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 20px;
+}
+
+html section .buttonsList li, body section .buttonsList li {
+  margin-right: 5px;
+}
+
+html section .button, body section .button {
+  position: relative;
+  padding: 15px 30px;
+  font-size: 11px;
+  border-radius: 5px;
+  color: #eeeeee;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+html section .primaryButton, body section .primaryButton {
+  background: #fc626a;
+  border: 2px solid #fc626a;
+  font-weight: bold;
+}
+
+html section .primaryButton:hover, body section .primaryButton:hover {
+  -webkit-box-shadow: 0px 0px 37px -20px #fc626a;
+          box-shadow: 0px 0px 37px -20px #fc626a;
+  background: #c94d53;
+  border-color: #c94d53;
+}
+
+html section .secondaryButton, body section .secondaryButton {
+  background: transparent;
+  border: 2px solid transparent;
+}
+
+html section .secondaryButton:hover, body section .secondaryButton:hover {
+  -webkit-box-shadow: 0px 0px 37px -20px #fc626a;
+          box-shadow: 0px 0px 37px -20px #fc626a;
+  background: rgba(0, 0, 0, 0.06);
+  border-color: #c94d53;
+}
+
+html section .secondaryButton:hover span, body section .secondaryButton:hover span {
+  color: #c94d53;
+}
+/*# sourceMappingURL=AppV2.css.map */

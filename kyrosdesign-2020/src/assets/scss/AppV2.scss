@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300i,400,900&display=swap');
+
+//
+// VARIABLES
+//
+
+$selection: #d6aaff;
+$primaryGradient: linear-gradient(-125deg, #fc626a 0%, #59308a 100%);
+$cardsBackground: #5a679c;
+$footer: #2c2f3b;
+$subtitleColor: #ffffff7c;
+$titleColor: #ffffff;
+$customWhite: #eeeeee;
+
+//MAIN COLORS
+$mainColor: #fc626a;
+$mainColorHover: #c94d53;
+$darkMainColor: #333645;
+$secondaryColor: #332591;
+
+@mixin neon($color) {
+    box-shadow: 0px 0px 37px -20px $color;
+}
+
+*{
+    -webkit-tap-highlight-color: transparent;
+}
+
+//
+// QUERY iPhone 5/SE => 320px Width
+//
+
+html, body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    background: $darkMainColor;
+    width: 100%;
+    height: 100%;
+
+    ::selection{
+        background: $mainColor;
+        color: white;
+    }
+
+    section{
+
+        height: 100vh;
+        width: 100%;
+
+        .left{
+            width: 100%;
+            height: 50%;
+            display: block;
+            position: relative;
+            background: $primaryGradient;
+        }
+
+        .titleComponent{
+
+            padding: 20px;
+            
+            .sectionTitleDriver{
+                position: relative;
+                display: block;
+                width: 2.8em;
+                height: .5em;
+                background-color: $mainColor; 
+                border-radius: 20px;
+            }
+        
+            .sectionTitle{
+                font-weight: 900;
+                font-size: 3em;
+                margin: 0;
+                color: $titleColor;
+            }
+
+            .sectionSubtitle{
+                color: $subtitleColor;
+            }
+        }
+
+        .inlineList{
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .buttonsList{
+
+            list-style: none;
+            display: flex;
+            padding: 0 20px;
+
+            li{
+                margin-right: 5px;
+            }
+
+        }
+
+        .button{
+            position: relative;
+            padding: 15px 30px;
+            font-size: 11px;
+            border-radius: 5px;
+            color: $customWhite;
+            text-transform: uppercase;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .primaryButton{
+            background: $mainColor;
+            border: 2px solid $mainColor;
+            font-weight: bold;
+            &:hover{
+                @include neon($mainColor);
+                background: $mainColorHover;
+                border-color: $mainColorHover;
+            }
+        }
+        .secondaryButton{
+            background: transparent;
+            border: 2px solid transparent;
+            &:hover{
+                @include neon($mainColor);
+                span{
+                    color: $mainColorHover;
+                }
+                background: rgba(0,0,0,0.06);
+                border-color: $mainColorHover;
+            }
+        }
+
+        
+
+    }
+}

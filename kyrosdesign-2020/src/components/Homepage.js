@@ -30,8 +30,8 @@ export default class Homepage extends Component {
           <h3 className="studyTitle titles" id="homeSub">Freelance Designers and Developers</h3>
           <h1 className="title titles" id="homeTitle"><span className="coloredText">Media</span> Design</h1>
           <p className="description" id="homeDesc">{this.state.phrase}</p>
-          <a href="#contact" className="buttonBackground buttonHomepage">Contact</a>
-        {window.innerWidth < 1440?<a href="/#workflow" className="swipe">
+          <a href="#contact" className="buttonHomepage">Contact</a>
+        {window.innerWidth < 1000?<a href="/#workflow" className="swipe">
           <span className="ver"/>
           <span className="arr" />
           <span className="arr" />
