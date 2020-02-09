@@ -7,59 +7,292 @@ html, body {
   padding: 0;
   margin: 0;
   font-family: 'Lato', sans-serif;
-  background: #333645;
+  background: #ffffff;
   width: 100%;
   height: 100%;
 }
 
+html a, body a {
+  outline: none;
+  text-decoration: none;
+}
+
 html ::-moz-selection, body ::-moz-selection {
-  background: #fc626a;
+  background: #601DCC;
   color: white;
 }
 
 html ::selection, body ::selection {
-  background: #fc626a;
+  background: #601DCC;
   color: white;
 }
 
-html section, body section {
+html #root, body #root {
+  width: calc(100% - 400px);
+  margin: 0 auto;
+}
+
+html #root .navbar, body #root .navbar {
+  position: absolute;
+  width: calc(100% - 400px);
+  height: 80px;
+  background: #ffffff;
+  z-index: 10000;
+  border-radius: 0 0 30px 30px;
+  -webkit-box-shadow: 0px 7px 13px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 7px 13px rgba(0, 0, 0, 0.1);
+  -webkit-transition: .3s;
+  transition: .3s;
+  display: inline;
+}
+
+html #root .navbar ul.itemsList, body #root .navbar ul.itemsList {
+  display: inline;
+  list-style: none;
+  position: absolute;
+  right: 100px;
+  top: 13px;
+}
+
+html #root .navbar ul.itemsList li.item, body #root .navbar ul.itemsList li.item {
+  padding: 10px 20px;
+  border-radius: 3000px;
+  display: inline;
+  margin: 0 17.5px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+}
+
+html #root .navbar ul.itemsList li.item a, body #root .navbar ul.itemsList li.item a {
+  -webkit-transition: .3s;
+  transition: .3s;
+  font-weight: bold;
+  color: #58555C;
+}
+
+html #root .navbar ul.itemsList li.item:hover a, body #root .navbar ul.itemsList li.item:hover a {
+  color: #601DCC;
+}
+
+html #root .navbar span, body #root .navbar span {
+  display: inline;
+  position: absolute;
+  right: -75px;
+  top: -10px;
+  cursor: pointer;
+}
+
+html #root .nav-brand, body #root .nav-brand {
+  position: relative;
+  display: block;
+  left: 32px;
+  height: 45px;
+  width: 200px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  text-decoration: none;
+}
+
+html #root .nav-brand span, body #root .nav-brand span {
+  position: absolute;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  top: 7px;
+  color: #58555C;
+  font-size: 20px;
+}
+
+html #root .nav-brand img, body #root .nav-brand img {
+  position: relative;
+  height: 110%;
+  padding: 0 15px;
+}
+
+html #root .subMenu, body #root .subMenu {
+  width: 150px;
+  -webkit-transition: opacity .4s;
+  transition: opacity .4s;
+  -webkit-transition: .3s;
+  transition: .3s;
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
+  background: white;
+  border-radius: 20px 0 20px 20px;
+  list-style: none;
+  padding: 20px;
+}
+
+html #root .subMenu li, body #root .subMenu li {
+  cursor: pointer;
+  margin: 0 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 3px 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+html #root .subMenu li a, body #root .subMenu li a {
+  color: #58555C;
+  -webkit-transition: .3s;
+  transition: .3s;
+  font-size: 1.2em;
+}
+
+html #root .subMenu li:hover a, body #root .subMenu li:hover a {
+  color: #601DCC;
+}
+
+html #root .closedSubMenu, body #root .closedSubMenu {
+  height: 0;
+  pointer-events: none;
+  opacity: 0;
+}
+
+html #root .openedSubMenu, body #root .openedSubMenu {
+  opacity: 1;
+  height: 120px;
+  pointer-events: all;
+}
+
+html #root .menuListener, body #root .menuListener {
+  position: relative;
+  display: none;
+  float: right;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+html #root .menuListener span, body #root .menuListener span {
+  width: 20px;
+  height: 3px;
+  position: absolute;
+  display: block;
+  background-color: #B3B3B3;
+  margin: 10px;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  right: 20px;
+  top: -22px;
+  border-radius: 10px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  font-weight: 800;
+}
+
+html #root .menuListener.closed span:nth-child(2), body #root .menuListener.closed span:nth-child(2) {
+  width: 28px;
+  top: -28px;
+}
+
+html #root .menuListener.closed span:nth-child(1), body #root .menuListener.closed span:nth-child(1) {
+  top: -15px;
+}
+
+html #root .menuListener.opened span:nth-child(2), body #root .menuListener.opened span:nth-child(2) {
+  width: 20px;
+  top: -22px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+html #root .menuListener.opened span:nth-child(1), body #root .menuListener.opened span:nth-child(1) {
+  top: -22px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+html #root .navbar.up, body #root .navbar.up {
+  top: -65px;
+}
+
+html #root .navbar.down, body #root .navbar.down {
+  top: 0;
+}
+
+html #root section, body #root section {
   height: 100vh;
   width: 100%;
 }
 
-html section .left, body section .left {
+html #root section .header, body #root section .header {
   width: 100%;
-  height: 50%;
+  height: 100%;
+}
+
+html #root section .left, body #root section .left {
+  width: 50%;
+  height: 100%;
   display: block;
+  position: absolute;
+  right: 0;
+  pointer-events: none;
+}
+
+html #root section .left img, body #root section .left img {
+  display: block;
+  position: absolute;
+  right: 0;
+  width: 105%;
+}
+
+html #root section .right, body #root section .right {
+  width: 50%;
+  height: 100%;
+}
+
+html #root section .right .right-container, body #root section .right .right-container {
   position: relative;
-  background: linear-gradient(-125deg, #fc626a 0%, #59308a 100%);
+  display: block;
+  width: 750px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
-html section .titleComponent, body section .titleComponent {
-  padding: 20px;
-}
-
-html section .titleComponent .sectionTitleDriver, body section .titleComponent .sectionTitleDriver {
+html #root section .titleComponent .sectionTitleDriver, body #root section .titleComponent .sectionTitleDriver {
   position: relative;
   display: block;
   width: 2.8em;
   height: .5em;
-  background-color: #fc626a;
+  background-color: #ffffff;
   border-radius: 20px;
 }
 
-html section .titleComponent .sectionTitle, body section .titleComponent .sectionTitle {
+html #root section .titleComponent .sectionTitle, body #root section .titleComponent .sectionTitle {
   font-weight: 900;
-  font-size: 3em;
+  font-size: 4em;
   margin: 0;
-  color: #ffffff;
+  width: 692px;
+  line-height: 77px;
+  color: #58555C;
 }
 
-html section .titleComponent .sectionSubtitle, body section .titleComponent .sectionSubtitle {
-  color: #ffffff7c;
+html #root section .titleComponent .sectionTitle .textDot, body #root section .titleComponent .sectionTitle .textDot {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  position: relative;
+  border-radius: 1000px;
+  margin: 0 10px;
+  background-color: #601DCC;
 }
 
-html section .inlineList, body section .inlineList {
+html #root section .titleComponent .titleColored, body #root section .titleComponent .titleColored {
+  color: #601DCC;
+}
+
+html #root section .titleComponent .sectionSubtitle, body #root section .titleComponent .sectionSubtitle {
+  margin: 10px 0;
+  font-size: 2em;
+  color: #B3B3B3;
+}
+
+html #root section .inlineList, body #root section .inlineList {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -72,57 +305,54 @@ html section .inlineList, body section .inlineList {
       flex-wrap: wrap;
 }
 
-html section .buttonsList, body section .buttonsList {
+html #root section .buttonsList, body #root section .buttonsList {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0 20px;
+  padding: 30px 0;
 }
 
-html section .buttonsList li, body section .buttonsList li {
-  margin-right: 5px;
+html #root section .buttonsList li, body #root section .buttonsList li {
+  margin-right: 30px;
 }
 
-html section .button, body section .button {
+html #root section .button, body #root section .button {
   position: relative;
-  padding: 15px 30px;
-  font-size: 11px;
+  padding: 20px 40px;
+  font-size: 1em;
   border-radius: 5px;
   color: #eeeeee;
   text-transform: uppercase;
-  border-radius: 5px;
+  border-radius: 1000px;
   cursor: pointer;
   -webkit-transition: .3s;
   transition: .3s;
 }
 
-html section .primaryButton, body section .primaryButton {
-  background: #fc626a;
-  border: 2px solid #fc626a;
+html #root section .primaryButton, body #root section .primaryButton {
+  background: #601DCC;
+  border: 3px solid #601DCC;
+  font-weight: 900;
+}
+
+html #root section .primaryButton:hover, body #root section .primaryButton:hover {
+  -webkit-box-shadow: 0px 0px 37px -14px #2D1791;
+          box-shadow: 0px 0px 37px -14px #2D1791;
+  background: #2D1791;
+  border-color: #2D1791;
+}
+
+html #root section .secondaryButton, body #root section .secondaryButton {
+  background: transparent;
+  border: 3px solid #601DCC;
+  color: #601DCC;
   font-weight: bold;
 }
 
-html section .primaryButton:hover, body section .primaryButton:hover {
-  -webkit-box-shadow: 0px 0px 37px -20px #fc626a;
-          box-shadow: 0px 0px 37px -20px #fc626a;
-  background: #c94d53;
-  border-color: #c94d53;
-}
-
-html section .secondaryButton, body section .secondaryButton {
-  background: transparent;
-  border: 2px solid transparent;
-}
-
-html section .secondaryButton:hover, body section .secondaryButton:hover {
-  -webkit-box-shadow: 0px 0px 37px -20px #fc626a;
-          box-shadow: 0px 0px 37px -20px #fc626a;
-  background: rgba(0, 0, 0, 0.06);
-  border-color: #c94d53;
-}
-
-html section .secondaryButton:hover span, body section .secondaryButton:hover span {
-  color: #c94d53;
+html #root section .secondaryButton:hover, body #root section .secondaryButton:hover {
+  color: #2D1791;
+  background: #ffffff;
+  border-color: #2D1791;
 }
 /*# sourceMappingURL=AppV2.css.map */

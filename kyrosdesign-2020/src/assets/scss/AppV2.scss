@@ -5,21 +5,28 @@
 //
 
 $selection: #d6aaff;
-$primaryGradient: linear-gradient(-125deg, #fc626a 0%, #59308a 100%);
 $cardsBackground: #5a679c;
 $footer: #2c2f3b;
-$subtitleColor: #ffffff7c;
-$titleColor: #ffffff;
+$subtitleColor: #B3B3B3;
+$titleColor: #58555C;
 $customWhite: #eeeeee;
+
+//PURPLE COLORS
+$darkPurple: #2D1791;
+$lightPurple: #601DCC;
+
+//GRADIENTS
+$purpleGradient: linear-gradient(-0deg, $lightPurple 0%, $darkPurple 100%);
 
 //MAIN COLORS
 $mainColor: #fc626a;
 $mainColorHover: #c94d53;
 $darkMainColor: #333645;
 $secondaryColor: #332591;
+$white: #ffffff;
 
 @mixin neon($color) {
-    box-shadow: 0px 0px 37px -20px $color;
+    box-shadow: 0px 0px 37px -14px $color;
 }
 
 *{
@@ -34,108 +41,328 @@ html, body{
     padding: 0;
     margin: 0;
     font-family: 'Lato', sans-serif;
-    background: $darkMainColor;
+    background: $white;
     width: 100%;
     height: 100%;
+    a {
+        outline: none;
+        text-decoration: none;
+    }
 
     ::selection{
-        background: $mainColor;
+        background: $lightPurple;
         color: white;
     }
 
-    section{
+    #root{
+        width: calc(100% - 400px);
+        margin: 0 auto;
 
-        height: 100vh;
-        width: 100%;
 
-        .left{
-            width: 100%;
-            height: 50%;
-            display: block;
-            position: relative;
-            background: $primaryGradient;
-        }
+        .navbar{
 
-        .titleComponent{
-
-            padding: 20px;
-            
-            .sectionTitleDriver{
-                position: relative;
-                display: block;
-                width: 2.8em;
-                height: .5em;
-                background-color: $mainColor; 
-                border-radius: 20px;
-            }
-        
-            .sectionTitle{
-                font-weight: 900;
-                font-size: 3em;
-                margin: 0;
-                color: $titleColor;
-            }
-
-            .sectionSubtitle{
-                color: $subtitleColor;
-            }
-        }
-
-        .inlineList{
-            list-style: none;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-        }
-
-        .buttonsList{
-
-            list-style: none;
-            display: flex;
-            padding: 0 20px;
-
-            li{
-                margin-right: 5px;
-            }
-
-        }
-
-        .button{
-            position: relative;
-            padding: 15px 30px;
-            font-size: 11px;
-            border-radius: 5px;
-            color: $customWhite;
-            text-transform: uppercase;
-            border-radius: 5px;
-            cursor: pointer;
+            position: absolute;
+            width: calc(100% - 400px);
+            height: 80px;
+            background: $white;
+            z-index: 10000;
+            border-radius: 0 0 30px 30px;
+            box-shadow: 0px 7px 13px rgba(0, 0, 0, 0.1);
             transition: .3s;
-        }
+            display: inline;
 
-        .primaryButton{
-            background: $mainColor;
-            border: 2px solid $mainColor;
-            font-weight: bold;
-            &:hover{
-                @include neon($mainColor);
-                background: $mainColorHover;
-                border-color: $mainColorHover;
-            }
-        }
-        .secondaryButton{
-            background: transparent;
-            border: 2px solid transparent;
-            &:hover{
-                @include neon($mainColor);
-                span{
-                    color: $mainColorHover;
+                ul.itemsList{
+
+                    display: inline;
+                    list-style: none;
+                    position: absolute;
+                    right: 100px;
+                    top: 13px;
+
+                    li.item{
+                        padding: 10px 20px;
+                        border-radius: 3000px;
+                        display: inline;
+                        margin: 0 17.5px;
+                        transition: .3s;
+                        cursor: pointer;
+
+                        a{
+                            transition: .3s;
+                            font-weight: bold;
+                            color: $titleColor;
+                        }
+
+                        &:hover a{
+                            color: $lightPurple;
+                        }
+                    }
+
                 }
-                background: rgba(0,0,0,0.06);
-                border-color: $mainColorHover;
+
+                span{
+                    display: inline;
+                    position: absolute;
+                    right: -75px;
+                    top: -10px;
+                    cursor: pointer;
+                }
+
+            }
+
+        .nav-brand{
+            position: relative;
+            display: block;
+            left: 32px;
+            height: 45px;
+            width: 200px;
+            top: 50%;
+            transform: translate(0, -50%);
+            text-decoration: none;
+
+            span{
+                position: absolute;
+                display: inline-flex;
+                top: 7px;
+                color: $titleColor;
+                font-size: 20px;
+            }
+
+            img{
+                position: relative;
+                height: 110%;
+                padding: 0 15px;
             }
         }
 
-        
+        .subMenu{
 
+            width: 150px;
+            transition: opacity .4s;
+            transition: .3s;
+            transform: translateX(-100px);
+            background: white;
+            border-radius: 20px 0 20px 20px;
+            list-style: none;
+            padding: 20px;
+
+            li {
+
+                cursor: pointer;
+                margin: 0 10px;
+                margin-bottom: 10px;
+                font-weight: bold;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                padding: 3px 0;
+                transition: .3s;
+
+                a{
+                    color: $titleColor;
+                    transition: .3s;
+                    font-size: 1.2em;
+                }
+                &:hover a{
+                    color: $lightPurple;
+                }
+            }
+
+        }
+
+        .closedSubMenu{
+            height: 0;
+            pointer-events: none;
+            opacity: 0;
+        }
+
+        .openedSubMenu{
+            opacity: 1;
+            height: 120px;
+            pointer-events: all;
+        }
+
+        .menuListener{
+                position: relative;
+                display: none;
+                float: right;
+                transition: .3s;
+
+                span{
+                    width: 20px;
+                    height: 3px;
+                    position: absolute;
+                    display: block;
+                    background-color: $subtitleColor;
+                    margin: 10px;
+                    transform: translate(0, -50%);
+                    right: 20px;
+                    top: -22px;
+                    border-radius: 10px;
+                    transition: .3s;
+                    font-weight: 800;
+                }
+
+        }
+
+        .menuListener.closed span:nth-child(2){
+                width: 28px;
+                top: -28px;
+        }
+        .menuListener.closed span:nth-child(1){
+                top: -15px;
+        }
+
+        .menuListener.opened span:nth-child(2){
+                width: 20px;
+                top: -22px;
+                transform: rotate(-45deg);
+        }
+
+        .menuListener.opened span:nth-child(1){
+                top: -22px;
+                transform: rotate(45deg);
+        }
+
+        .navbar.up{top: -65px;}
+
+        .navbar.down{top: 0;}
+
+        section{
+
+            height: 100vh;
+            width: 100%;
+
+            .header{
+                width: 100%;
+                height: 100%;
+            }
+
+            .left{
+                width: 50%;
+                height: 100%;
+                display: block;
+                position: absolute;
+                right: 0;
+                pointer-events: none;
+                img {
+                    display: block;
+                    position: absolute;
+                    right: 0;
+                    width: 105%;
+                }
+            }
+
+            .right{
+                width: 50%;
+                height: 100%;
+
+                .right-container{
+                    position: relative;
+                    display: block;
+                    width: 750px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+
+            .titleComponent{
+
+                .sectionTitleDriver{
+                    position: relative;
+                    display: block;
+                    width: 2.8em;
+                    height: .5em;
+                    background-color: $white;
+                    border-radius: 20px;
+                }
+
+                .sectionTitle{
+                    font-weight: 900;
+                    font-size: 4em;
+                    margin: 0;
+                    width: 692px;
+                    line-height: 77px;
+                    color: $titleColor;
+
+                    .textDot{
+                        width: 12px;
+                        height: 12px;
+                        display: inline-block;
+                        position: relative;
+                        border-radius: 1000px;
+                        margin: 0 10px;
+                        background-color: $lightPurple;
+                    }
+
+                }
+
+                .titleColored{
+                    color: $lightPurple;
+                }
+
+                .sectionSubtitle{
+                    margin: 10px 0;
+                    font-size: 2em;
+                    color: $subtitleColor;
+                }
+            }
+
+            .inlineList{
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .buttonsList{
+
+                list-style: none;
+                display: flex;
+                padding: 30px 0;
+
+                li{
+                    margin-right: 30px;
+                }
+
+            }
+
+            .button{
+                position: relative;
+                padding: 20px 40px;
+                font-size: 1em;
+                border-radius: 5px;
+                color: $customWhite;
+                text-transform: uppercase;
+                border-radius: 1000px;
+                cursor: pointer;
+                transition: .3s;
+            }
+
+            .primaryButton{
+                background: $lightPurple;
+                border: 3px solid $lightPurple;
+                font-weight: 900;
+                &:hover{
+                    @include neon($darkPurple);
+                    background: $darkPurple;
+                    border-color: $darkPurple;
+                }
+            }
+
+            .secondaryButton{
+                background: transparent;
+                border: 3px solid $lightPurple;
+                color: $lightPurple;
+                font-weight: bold;
+
+                &:hover{
+                    color: $darkPurple;
+                    background: $white;
+                    border-color: $darkPurple;
+                }
+            }
+
+
+
+        }
     }
 }
